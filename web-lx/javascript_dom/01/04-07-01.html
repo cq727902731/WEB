@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    //1、函数的定义
+    function shout(){
+        var beatles = ['John','Paul','Geogre','Ringo'];
+        for(var count = 0; count < beatles.length; count++){
+
+            console.log(beatles[count]);
+        }
+
+    }
+
+    //函数的调用
+    shout();
+
+    //3、函数的参数
+    function multiply(num1,num2){
+        var total = num1 * num2;
+        console.log(total);
+    }
+    multiply(10,2);
+
+    //4、函数的返回值
+    function multiply1(num1,num2){
+        console.log('two');
+       return num1 * num2;
+    }
+
+    var result = multiply1(20,5);//调用后定义的版本：实际参数的个数小于形式参数时，没有传值的参数是undefined
+    console.log(result);
+
+    //5、同名函数，后面覆盖前面的定义；实际参数的个数和形式参数的个数不要求一定相等
+    function multiply1(num1,num2,num3){
+
+        console.log(arguments.length);
+        console.log(num3);//
+        console.log('three');
+        return num1 * num2 * num3;
+    }
+    console.log(multiply1(10,3,4));//120
+    console.log(multiply1(10,3,4,5));//120 多余的参数通过arguments传递
+</script>
+</body>
+</html>

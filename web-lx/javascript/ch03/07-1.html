@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>&&、||、!</title>
+    <script>
+
+        //&&：运算符两边只要有一个为假，那么最后的结果就为假，全部为真，结果为真
+        var a = false;//真
+        var b = false;//真
+        var c = a && b;//真
+        console.log(c);
+
+        //||：运算符两边只要有一个为真，那么结果就是真，全部为假，结果为假
+        var x = true;
+        var y = true;
+        var z = x || y;
+        console.log(z);
+
+        //!：非
+        var m = true;
+        var n = !m;
+        console.log(n);
+
+        //判断闰年：能被4整除并且不能被100整除，或者 能被400整除的数
+        var year = 2000;
+        var leapYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+        console.log(leapYear);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

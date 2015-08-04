@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>短路 和 非短路</title>
+    <script>
+
+        /*var a = false;
+        var b = false;
+        var z = a & b;
+        console.log('z=' + z);*/
+
+
+        //短路与：&&
+        //只要第一个表达式为假，那么后面的表达式就不会进行运算
+        var a = 1;
+        var b = 2;
+        var result = a > b && a++ > b;
+        console.log(result);
+        console.log('a=' + a);
+        console.log('b=' + b);
+
+
+        //短路与：||
+        //只要第一个表达式为真，那么后面的表达式就不会进行运算
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

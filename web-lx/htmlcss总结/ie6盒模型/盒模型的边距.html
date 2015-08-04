@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        /*在正常的文档流中，上下排列的两个块元素，盒子之间的距离，取边距较大者*/
+        #d1{
+            background-color: green;
+            width: 800px;
+            height: 200px;
+            margin-bottom: 50px;
+        }
+
+        #d2{
+            background-color: blue;
+            width: 800px;
+            height: 200px;
+            margin-top: 50px;
+        }
+
+        /*在正常的文档流中，左右排列的两个内联元素没有上下边距，盒子之间的距离是两个边距的累加之和*/
+        #s1{
+            margin: 10px;
+        }
+
+        #s2{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <span id="s1">span1</span>
+        <span id="s2">span2</span>
+    </div>
+    <div id="d2"></div>
+
+</body>
+</html>

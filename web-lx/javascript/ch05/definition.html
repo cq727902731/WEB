@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        function showDefinition(){
+
+            var definitions = [{
+                dt: '计算机',
+                dd: '用来计算的仪器 ... ...'
+            },{
+                dt: '显示器',
+                dd: '以视觉方式显示信息的装置 ... ...<'
+            },{
+                dt: '计算机',
+                dd: '用来计算的仪器 ... ...'
+            },{
+                dt: '显示器',
+                dd: '以视觉方式显示信息的装置 ... ...<'
+            }];
+
+
+            var str = '<dl>';
+            for(var i = 0; i < definitions.length; i++){
+                var definition = definitions[i];
+                var dt = definition.dt;
+                var dd = definition.dd;
+
+                str += '<dt>' + dt + '</dt><dd>' + dd + '</dd>'
+            }
+
+            str += '</dl>';
+            document.getElementById('definition').innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="查看定义" onclick="showDefinition()">
+    <div id="definition"></div>
+
+</body>
+</html>

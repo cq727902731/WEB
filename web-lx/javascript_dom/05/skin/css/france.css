@@ -1,0 +1,14 @@
+.header{
+    background-color: darkblue;
+    color: #fff;
+}
+
+.main{
+    background-color: white;
+    color: #0079BE;
+}
+
+.footer{
+    background-color: darkred;
+    color: #fff;
+}

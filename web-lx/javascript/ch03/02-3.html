@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>全局变量和局部变量同名</title>
+    <script>
+
+        var a = 100;
+        f();
+        console.log('全局范围内访问变量a：' + a);
+
+
+        function f(){
+            var a = 'hello';//如果局部变量不写var声明，那么就自动变为全局变量
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

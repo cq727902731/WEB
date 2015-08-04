@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //showTime();
+        //定时反复执行某一个函数
+        setInterval(showTime, 500);
+
+
+        function showTime(){
+            var now = new Date();
+            var year = now.getFullYear();
+
+            var month = now.getMonth() + 1;
+            month = month < 10 ? '0' + month : month;
+
+            var date = now.getDate() < 10 ? '0' + now.getDate() : now.getDate();
+            var hours = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
+            var minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+
+            //如果seconds比10小那么前面加0赋给seconds，否则前面不加0赋给seconds
+            var seconds = now.getSeconds();
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            var str = year + '年' + month + '月' + date + '日 ' + hours + ':' + minutes + ':' + seconds;
+            console.log(str);
+
+            var h1 = document.getElementById('clock');
+            h1.innerHTML = str;
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id="clock"></h1>
+</body>
+</html>

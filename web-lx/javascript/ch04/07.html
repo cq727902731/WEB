@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*从1到10*/
+        /*var a = 1;//循环初始条件
+        while(a <= 10){//循环临界条件
+            console.log(a);
+            document.write(a + '<br>');
+            a++;//迭代
+        }*/
+
+
+        /*从1到10*/
+        //for(循环初始条件;循环临界条件;迭代)
+        for(var a = 1; a <= 10; a++){
+            //循环体
+            console.log(a);
+        }
+
+        //执行的流程为：
+        //第一轮、循环初始条件=>循环临界条件=>循环体=>迭代
+        //第二轮、循环临界条件=>循环体=>迭代
+        //第三轮、循环临界条件=>循环体=>迭代
+        //......
+
+
+         /*嵌套for循环*/
+        for(var b = 0; b <= 9; b++){
+            for(var c = 0; c <= 9; c++){
+                if(!(b == 0 && c == 0)){
+                    console.log(b + '' + c);
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

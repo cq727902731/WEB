@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+
+    var i = 0;
+    function f1(){
+        console.log(new Date());
+        i++;
+        if(i <= 100){
+            requestAnimationFrame(f1);
+        }
+        /*if(i >= 100){
+            cancelRequestAnimationFrame(id);
+        }*/
+    }
+
+    var id = requestAnimationFrame(f1);
+</script>
+
+</body>
+</html>

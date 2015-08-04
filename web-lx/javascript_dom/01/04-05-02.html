@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //数值在boolean环境中是true,0是false
+    var a = 100;
+    if(a){
+        console.log(true);
+    }else{
+        console.log(false);
+    }
+
+    //2、字符串在boolean环境中是true，空字符串是false
+    var b = '';
+    if(b){
+        console.log(true);
+    }else{
+        console.log(false);
+    }
+
+    //3、null在boolean环境中是false
+    var c = null;
+    if(c){
+        console.log(true);
+    }else{
+        console.log(false);
+    }
+
+    //4 undefined在boolean环境中是false
+    var d = undefined;
+    if(d){
+        console.log(true);
+    }else{
+        console.log(false);
+    }
+
+    //5、对象在boolean环境中是true
+    var e[];
+    if(e){
+        console.log(true);
+    }else{
+        console.log(false);
+    }
+
+    //6 NaN在boolean环境中是false
+    var f = 'a' - 'b';
+    console.log(f);
+    if(isNaN(f)){
+        console.log('不是一个数字');
+    }else{
+        console.log('是一个数字');
+    }
+</script>
+</body>
+</html>

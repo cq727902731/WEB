@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //map遍历：返回一个数组
+        var data = [1, 2, 3, 4, 5, 6];
+        var newMap = data.map(function(value, i){//第一个参数是元素的值，第二个参数是索引
+            console.log(i + ':' + value);
+            return value + '分';
+        });
+        console.dir(newMap);
+
+
+        //使用forEach实现相同的功能：
+        var newMap1 = [];
+        data.forEach(function(value){
+            console.log(value);
+            newMap1.push(value + '分');
+        });
+        console.dir(newMap1);
+
+
+        //使用forEach实现相同的功能：
+        var newMap2 = [];
+        for(var i = 0; i < data.length; i++){
+            newMap2[i] = data[i] + '分';
+        }
+        console.dir(newMap2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

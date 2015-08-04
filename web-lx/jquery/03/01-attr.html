@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<img src="images/img01.jpg" alt="这是一幅风景图片"/>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+        var $img = $('img');
+
+        //获取属性值
+        var src = $img.attr('src');
+        var alt = $img.attr('alt');
+        console.log(src);
+        console.log(alt);
+
+        //修改属性值
+        $img.attr('src','images/img02.jpg');
+        $img.attr('alt','这是第二幅图片');
+
+        //修改属性值（批量）
+        $img.attr({'src':'images/img03.jpg','alt':'这是第三幅图片'});
+
+        //第二个参数是函数
+        $img.attr('alt','随机图片');
+        $img.attr('src', function () {
+
+            var r = Math.floor(Math.random() * 2 + 1);
+            return 'images/img0' + r + '.jpg';
+        })
+    });
+
+
+</script>
+</body>
+</html>

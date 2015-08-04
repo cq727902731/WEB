@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>兼容IE6、7的inline-block</title>
+
+    <style>
+
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        div{
+            display: inline-block;/*IE8和以上，和现代浏览器*/
+            *display: inline;/*IE6、7*/
+            *zoom: 1;/*IE6、7*/
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<span id="e1">inline</span>
+<div id="e2">block</div>
+
+
+<script>
+
+    /*var e1 = document.getElementById('e1');
+    var e2 = document.getElementById('e2');
+    e1.currentStyle.haslayout = true;
+    console.log('e1.haslayout = ' + e1.currentStyle.hasLayout);
+    console.log('e2.haslayout = ' + e2.currentStyle.hasLayout);
+*/
+
+</script>
+</body>
+</html>

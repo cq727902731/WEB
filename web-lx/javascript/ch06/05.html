@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var a = [100, 200, 300];
+        //只为数组a扩展一个方法
+        a.myFun = function (){
+            return '我的函数';
+        };
+
+        var b = ['a', 'b', 'c'];
+
+        //为所有的数组扩展一个方法
+        Array.prototype.arrFun = function(){
+          return '数组原型的函数';
+        };
+
+        console.dir(a);
+        console.dir(b);
+
+        //方式1：for循环
+        for(var i = 0; i < a.length; i++){
+            console.log(a[i]);
+        }
+
+        //方式2：for/in循环
+        for(i in a){
+            if(a.hasOwnProperty(i)){//可以过滤出只属于当前数组本身的属性（方法）
+                console.log(i);
+            }
+            //console.log(a[i]);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

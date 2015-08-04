@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    var my_mood = 'happy';
+    var your_mood = 'sad';
+    if(my_mood == your_mood){
+        alert('We both feel the same');
+    }
+
+    if(my_mood != your_mood){
+        console.log('We are feeling defferent mood.');
+    }
+
+    //检查更严格
+    var a = false;
+    var b = '';
+    if(a == b){
+        console.log('a equals b');
+    }
+
+    if(a === b){
+        console.log('a equals b');
+    }
+
+    //===检查内容和类型 ===比较数据类型 和 值
+    var x = 100;
+    var y = '100';
+    if(x == y){
+        console.log('a equals b');
+    }
+
+    if(x === y){
+        console.log('a equals b');
+    }
+
+    //内容相同的前提下
+    //===对象和对象比较地址，对象和基本类型一定不等，基本类型和基本类型一定相等
+    var v1 = '123';
+    var v2 = '123';
+    var v3 = '4';
+    var o4 = new String('123');
+    var o5 = new String('123');
+    var o6 =o4;
+
+    console.log('v1 === v2:' + (v1 === v2));//true
+    console.log('v1 === o4:' + v1 === o4);//false
+    console.log('o4 === o5:' + o4 === o5);//false
+    console.log('o4 === o6:' + o4 === o6);//true
+
+    //例外规则
+    console.log(null == false);//false
+    console.log(null == 0);//false
+    console.log(undefined ==  false);//false
+    console.log(undefined ==  0);//false
+    console.log(NaN == NaN);//fasle,NaN不论和谁比都是false
+
+</script>
+
+</body>
+</html>

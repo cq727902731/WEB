@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="usermanager.css"/>
+    <script src="usermanager.js"></script>
+</head>
+<body>
+
+<form name="f" action="">
+    <input type="hidden" name="userindex">
+    <input type="text" name="username">
+    <input type="text" name="age">
+    <input type="text" name="code">
+    <input type="button" value="增加" onclick="addUser()">
+    <input type="button" value="更新" onclick="updateUser()">
+</form>
+
+    <table id="list">
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>学号</th>
+            <th>删除</th>
+            <th>编辑</th>
+        </tr>
+
+    </table>
+
+    <script>
+
+        listUsers();
+    </script>
+</body>
+</html>

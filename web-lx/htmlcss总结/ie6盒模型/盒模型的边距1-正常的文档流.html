@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        /*在浮动布局中，浮起来的块元素和他上下左右的盒子之间的边距是两个相邻的盒子的边距累加之和*/
+        #s1{
+            margin: 10px;
+        }
+
+        #s2{
+            float: left;
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+        }
+
+        #d3{
+            background-color: darkred;
+        }
+
+        #d4{
+            float: left;
+            background-color: deeppink;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="d1">
+            <span id="s1">span1</span>
+            <span id="s2">span2</span>
+        </div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+    </div>
+</body>
+</html>

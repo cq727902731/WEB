@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*var a = [100, 200, 300, 200, 300];
+        var i1 = a.indexOf(300);
+        console.log(i1);
+
+        var i2 = a.lastIndexOf(300);
+        console.log(i2);
+
+
+        var s = 'hello';
+        var i3 = s.indexOf('l');
+        console.log(i3);
+
+        var i4 = s.lastIndexOf('l');
+        console.log(i4);*/
+
+        //需求：
+        //已知：有一个任意数组、想要在数组中查找一个元素
+        //要求：得到一个新的数组，这个新数组中的元素是被查找的元素在已知数组中的索引
+        var arr = ['a', 'b', 'a', 'c', 'b', 'a'];
+        var search = 'a';
+        var result = [];
+
+        var position = 0;
+        var ii = 0;
+        while(position < arr.length){//当查找的初始位置小于数组的长度的时候，才能继续进行查找
+            ii = arr.indexOf(search,position);
+            position = ii + 1;
+            result.push(ii);
+        }
+
+        console.log(result);
+
+
+        //result = [0, 2, 5];
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

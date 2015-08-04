@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    var p1 = {
+        'name':'Helen',
+        'age': 10,
+        'walk': function() {
+            console.log(this.name + 'is walking');
+        },
+        'sleep': function() {
+            console.log(this.name + 'is sleeping');
+        }
+    };
+
+    var p2 = {
+        'mood': 'happy',
+        'sex': 'female',
+        'run': function(){
+            console.log('running');
+        }
+    };
+
+    p1.name = 'Tom';
+    p1.walk();
+    p1.sleep();
+
+</script>
+</body>
+</html>

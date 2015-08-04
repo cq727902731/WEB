@@ -1,0 +1,200 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font: inherit;
+}
+body{
+    background-color: #ffffff;
+    font: 14px "Microsoft YaHei", SimHei, Verdana, Arial, sans-serif;
+    color: #333333;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.yun-header{
+    height: 62px;
+    background: url("../img/header-bg.png") repeat 0 0;
+    border-bottom: 0;
+    position: relative;
+    margin-bottom: 0;
+}
+.yun-header img{
+    margin-top: 10px;
+}
+.yun-header .line{
+    display: inline-block;
+    height: 62px;
+    width: 211px;
+    border-right: 2px solid #65A5EC;
+    position: absolute;
+    top: 0;
+
+}
+.yun-header .h-content{
+    display: inline-block;
+    margin-left: 1500px;
+    margin-top: 20px;
+}
+.yun-header .h-content span{
+    color: #ffffff;
+    font-weight: bold;
+}
+.yun-header .h-content a{
+    color: orange;
+}
+/*侧边栏*/
+.sidebar{
+    border: 1px solid #dcdcdc;
+    border-bottom: 0;
+}
+.sidebar .black{
+    height: 30px;
+    background: linear-gradient(grey,black);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 1px;
+
+}
+.sidebar ul li a{
+    background: linear-gradient(#FFFFFF,#F8F8F8,#F4F4F4);
+    border-bottom: 1px solid #dcdcdc;
+    font-weight: bold;
+    color: #868A90;
+    position: relative;
+}
+.sidebar ul li img{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+}
+.sidebar .kong{
+    height: 100px;
+}
+.sidebar .question-pic{
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.sidebar .question{
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+
+}
+
+.form-inline .form-control{
+     display: inline-block;
+    width: 200px;
+    border: 1px solid #dcdcdc;
+    margin-top: 5px;
+ }
+.form-group img{
+    margin-top: 5px;
+}
+/*右主栏*/
+.yun-content{
+    margin-top: 20px;
+}
+.panel-heading{
+    background: linear-gradient(#FFFFFF,#F8F8F8,#F4F4F4);
+    font-weight: bold;
+}
+.panel-body h2{
+    color: #868A90;
+    margin-bottom: 20px;
+}
+.btn-group{
+    margin-left:160px;
+}
+.panel{
+    height: 207px;
+}
+
+/*个人信息*/
+.media-left .a1{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: dodgerblue;
+}
+/*.media-left img{
+    margin-top: 10px;
+}*/
+.media-body a{
+    display: inline-block;
+    margin-bottom: 10px;
+    color: dodgerblue;
+
+}
+.media-body p em{
+    font-weight: bold;
+    color: orange;
+    font-size: 20px;
+}
+.media-body input{
+    display: inline-block;
+    height: 30px;
+    width: 82px;
+}
+
+/*所有产品*/
+.panel-2{
+    height: 300px;
+}
+.panel-2 .media-2{
+    height: 100px;
+    margin-top: 20px;
+}
+.panel-2 .media-body-2{
+    font-weight: bold;
+}
+
+/*云主机*/
+.mainframe-body{
+    border-top: 2px solid #398add;
+    background-color:#F6F6F6 ;
+}
+h3{
+    margin-top: 1px;
+    color: #3685d3;
+}
+p{
+    line-height: 30px;
+}
+.yun-margin{
+    margin: 20px 0;
+}
+.yun-black{
+    color: #fff;
+    background-color: #333;
+    border-color:#222;
+}
+.yun-black:hover{
+    color: #fff;
+    background-color: #222;
+    border-color:#111;
+}
+.yun-right{
+    float: right;
+}
+.yun-border{
+    border: solid 2px #D6D6D6;
+}
+thead{
+    background-color: #F6F6F6;
+
+}
+th{
+    border: 1px solid #bfbfbf;
+    color: #3685d3;
+}

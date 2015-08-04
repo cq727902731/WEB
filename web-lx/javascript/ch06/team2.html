@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //首先按照职务进行排序：队长、守门员、球员
+        //球员按照年龄进行正序排序
+        //如果年龄相同则按名字进行正序排序
+
+        //Jack、Luce、Tim、Tom、Peter
+        var numbers = [
+            {
+                name: 'Tom',
+                age: 18,
+                position: '球员'
+            },
+            {
+                name: 'Tim',
+                age: 18,
+                position: '球员'
+            },
+            {
+                name: 'Peter',
+                age: 20,
+                position: '球员'
+            },
+            {
+                name: 'Jack',
+                age: 21,
+                position: '队长'
+            },
+            {
+                name: 'Luce',
+                age: 20,
+                position: '守门员'
+            }
+
+        ];
+
+        var leader = numbers.filter(function(value){
+            if(value.position == '队长'){
+                return true;
+            }
+        });
+
+        var goalkeeper = numbers.filter(function(value){
+            if(value.position == '守门员'){
+                return true;
+            }
+        });
+
+        var player = numbers.filter(function(value){
+            if(value.position == '球员'){
+                return true;
+            }
+        });
+
+        //a排前面 返回负数，  b排前面就返回正数
+        var newPlayer = player.sort(function (a, b){
+            if(a.age == b.age){
+                if(a.name > b.name){
+                    return 1;
+                }else{
+                    return -1;
+                }
+            }
+            return a.age - b.age;
+        });
+
+
+        var newNumbers = leader.concat(goalkeeper, player);
+        console.dir(newNumbers);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

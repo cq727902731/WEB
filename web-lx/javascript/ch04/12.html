@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*数组*/
+        var days = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'] ;
+
+
+        /*for in 遍历数组*/
+        for(var day in days){
+            //console.log(day);
+            console.log(days[day]);
+            //days[day] = '今天是' + days[day];
+        }
+
+        /*for 遍历数组*/
+        //days[0] - days[6];
+        for(var i = 0; i < days.length; i++){
+            console.log(days[i]);
+            //days[i] = '今天是' + days[i];
+        }
+
+
+        //自定义对象
+        var person = {'姓名': '常宇', '年龄': 20, '婚否': false};
+        /*person['姓名']
+        person['年龄']
+        person['婚否']*/
+        for(var pro in person){
+            console.log(person[pro]);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

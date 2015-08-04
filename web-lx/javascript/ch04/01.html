@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*基本语法1：if... */
+        var a = true;//非0、非''、非null、非undefined、非isNaN()、非false
+        if(a){
+            console.log('条件成立');
+        }
+
+        /*基本语法2：if... else... :
+        else只能有一个*/
+        var b = 100;
+        if(b >= 60){
+            console.log('成绩合格');
+        }else{
+            console.log('成绩不合格');
+        }
+
+        /*基本语法3：if... else if... else...:
+        else if 可以有多个
+        else    只能有一个*/
+        //90 -- 100  :  优秀
+        //70 -- 89   :  良好
+        //60 -- 69   :  达标
+        //0  -- 59   :  未达标
+        var c = '60';//在逻辑判断时进行了自动转换
+        if(c >= 90 && c <= 100){
+            console.log('成绩优秀');
+        }else if(c <= 89 && c >= 70){
+            console.log('成绩良好');
+        }else if(c <= 69 && c >= 60){
+            console.log('成绩达标');
+        }else if(c <= 59 && c >= 0){
+            console.log('未达标');
+        }else{
+            console.log('您输入的不合法');
+
+            /*基本语法4：嵌套if语句*/
+            if(typeof c == 'number'){
+                console.log('您输入的分数不在正确的范围内');
+            }else{
+                console.log('请您输入一个数字');
+            }
+        }
+
+
+
+        console.log('程序的其余部分');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

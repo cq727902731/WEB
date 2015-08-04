@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>全局变量</title>
+
+    <script>
+        //不能被访问
+        console.log('不同的script标签中，定义之前访问全局变量a：' + a);
+    </script>
+
+    <script>
+
+        //打印undefined
+        console.log('定义之前访问全局变量a：' + a);
+
+        //全局变量
+        var a = 100;
+        console.log('函数外部访问全局变量a：' + a);
+        f();
+
+        function f(){
+            //局部变量
+            var b = 200;
+            console.log('函数内部访问全局变量a：' + a);
+        }
+
+    </script>
+</head>
+<body>
+
+    <script>
+        console.log('body中的另一个script标签中访问全局变量a：' + a);
+    </script>
+</body>
+</html>

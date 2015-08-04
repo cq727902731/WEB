@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .item{
+            height: 128px;
+            border-bottom: 2px solid darkgray;
+            padding: 10px;
+        }
+
+        .item img{
+            float: left;
+            margin-right: 30px;
+        }
+
+    </style>
+    <script>
+
+        function showUser(){
+
+            var users = [{
+                name: 'Helen',
+                position: '总经理',
+                figure: '1.png'
+            },{
+                name: 'Peter',
+                position: '客户服务',
+                figure: '2.png'
+            },{
+                name: 'Tom',
+                position: '财务'
+            },{
+                name: '小草',
+                position: '职员',
+                figure: '3.png'
+            },{
+                name: '大王',
+                position: '职员',
+                figure: '4.png'
+            }];
+
+
+            var str = '';
+            for(var i = 0; i < users.length; i++){
+
+                var user = users[i];
+                var name = user.name;
+                var position = user.position;
+                var figure = user.figure;
+
+                if(!('figure' in user)){
+                    figure = 'no.png';
+                }
+
+                str += '<div class="item">';
+                str += '<img src="user/' + figure + '" alt="Helen">';
+                str += '<h3>' + name + '</h3>';
+                str += '<p>' + position + '</p>';
+                str += '</div>';
+            }
+
+            document.getElementById('userList').innerHTML = str;
+
+        }
+    </script>
+</head>
+<body>
+    <div id="userList">
+        <!--<div class="item">
+            <img src="user/1.png" alt="Helen">
+            <h3>Helen</h3>
+            <p>总经理</p>
+        </div>
+        <div class="item">
+            <img src="user/2.png" alt="Helen">
+            <h3>Helen</h3>
+            <p>总经理</p>
+        </div>
+        <div class="item">
+            <img src="user/no.png" alt="Helen">
+            <h3>Helen</h3>
+            <p>总经理</p>
+        </div>
+        <div class="item">
+            <img src="user/3.png" alt="Helen">
+            <h3>Helen</h3>
+            <p>总经理</p>
+        </div>
+        <div class="item">
+            <img src="user/4.png" alt="Helen">
+            <h3>Helen</h3>
+            <p>总经理</p>
+        </div>-->
+    </div>
+
+    <script>
+        showUser();
+    </script>
+</body>
+</html>

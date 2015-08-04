@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    height: 1000px;
+
+}
+
+.header{
+    height: 210px;
+    background-color: #731000;
+}
+
+.main iframe{
+    float: right;
+}
+
+
+.header h1{
+    color: #ffffff;
+}
+
+iframe.header{
+    height: 200px;
+    width: 100%;
+}

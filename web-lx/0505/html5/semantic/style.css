@@ -1,0 +1,237 @@
+/*html5*/
+article,aside,dialog,main,footer,header,section,footer,nav,figure,menu{display:block}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font: inherit;
+}
+
+body{
+    background: #ffffff;
+    font: 14px 微软雅黑,黑体,Verdana,Arial,sans-serif;
+    color: #333;
+    border-top: 8px solid #006f47;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrap{
+    width: 960px;
+    margin: 0 auto;
+}
+
+/*头部*/
+.starbucks-top{
+    height: 120px;
+}
+
+.starbucks-logo{
+    float: left;
+    width: 84px;
+    height: 84px;
+    vertical-align: bottom;
+    margin-top: 20px;
+}
+
+/*导航*/
+.starbucks-top-menu{
+    float: left;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.starbucks-top-menu ul li{
+    display: inline-block;
+    float: left;  /*IE7不兼容*/
+    background-color: #efe5d0;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+.starbucks-top-menu ul li.selected{
+    background-color: #c8b99c;
+}
+
+.starbucks-top-menu ul li a{
+    color: #006f47;
+    font-weight: bold;
+}
+
+/*侧边栏*/
+.left-aside{
+    float: left;
+    width: 350px;
+}
+
+.left-aside section{
+    background: url("images/background.gif") top left repeat;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.left-aside section h3{
+    color: #006f47;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/*星享之旅*/
+.news p{
+    line-height: 1.8em;
+}
+
+.news p a{
+    color: #006f47;
+}
+
+/*美食*/
+.food figure{
+    float: left;
+}
+
+.food .figure-right{
+    margin-left: 20px;
+}
+
+.food figure img{
+    width: 141px;
+    height: 158px;
+    border: 2px solid #ffffff;
+}
+
+.food figure figcaption{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.clear{
+    clear: both;
+}
+
+/*主内容区域*/
+main{
+    background: url("images/background.gif") top left repeat;
+    float: left;
+    width: 560px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+main article.article{
+    border-bottom: 2px solid #c8b99c;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+main article.last{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+main article .comment{
+    border-bottom: 1px solid #c8b99c;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+main article h3{
+    color: #006f47;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+main article time{
+    color: #675c47;
+    font-size: 0.9em;
+}
+
+main article .author{
+    float: right;
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+
+main article p{
+    line-height: 1.5em;
+    text-indent: 2em;
+    margin: 5px 0;
+}
+
+main article b{
+    font-weight: bold;
+    color: #675c47 ;
+}
+
+main article small{
+    color: #000;
+    font-size: 0.8em;
+}
+
+main article footer{
+    color: #675c47;
+    text-align: right;
+    font-size: 0.8em;
+}
+/*页脚*/
+.page-footer{
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #675c47;
+    color: #efe5d0;
+    text-align: center;
+    font-size: 90%;
+    clear: both;
+}
+
+/*form*/
+main.form{
+    margin-left: 0;
+    width: 900px;
+}
+
+main.form h3 {
+    color: #006f47;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main.form form {
+    display: table;
+    width: 900px;
+    padding: 10px;
+}
+
+main.form .row {
+    display: table-row;
+}
+
+main.form .cell {
+    display: table-cell;
+    vertical-align: top;
+    padding: 3px;
+}
+
+main.form .row .cell:first-child {
+    text-align: right;
+    padding-right: 20px;
+}
+
+main.form div.heading {
+    font-weight: bold;
+}
+
+main.form textarea {
+    width: 400px;
+    height: 50px;
+}

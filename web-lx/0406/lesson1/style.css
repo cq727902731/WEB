@@ -1,0 +1,44 @@
+*{
+
+}
+body{
+    background-color:#F9E6C8 ;
+}
+
+h1{
+    background-color: #7f1903;
+    color:#ffffff;
+}
+h2{
+    color:red
+}
+h3{
+    color:darkblue;
+}
+.nav a{
+    color:salmon;
+    text-decoration:none;
+}
+.nav a:link{
+    color:bisque;
+    text-decoration:blink;
+}
+.nav a:visited{
+    color:#000000;
+    text-decoration:underline;
+}
+.nav a:hover{
+    color:mediumaquamarine;
+}
+ol li:first-child{
+    color:green;
+}
+input:focus{
+    background-color: aqua;
+}
+input[type=text], input[type=password]{
+    /*border-width: 1px;
+    border-color: green;
+    border-style: solid;*/
+    border:1px green solid;
+}

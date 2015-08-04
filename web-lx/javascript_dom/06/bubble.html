@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        #d3{
+            height: 60px;
+            width: 60px;
+            background-color: blue;
+        }
+
+        #d2{
+             height: 120px;
+             width: 120px;
+            background-color: yellow;
+         }
+
+        #d1{
+            height: 240px;
+            width: 240px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2">
+            <div id="d3">事件冒泡机制</div>
+        </div>
+    </div>
+
+    <script>
+
+        window.onload = function(){
+
+            var d1 = document.getElementById('d1');
+            d1.onmouseenter = function(){
+                console.log(this.id);
+            };
+
+            var d2 = document.getElementById('d2');
+            d2.onmouseenter = function(){
+                console.log(this.id);
+            };
+
+            var d3 = document.getElementById('d3');
+            d3.onmouseenter = function(){
+                console.log(this.id);
+            };
+        }
+    </script>
+</body>
+</html>

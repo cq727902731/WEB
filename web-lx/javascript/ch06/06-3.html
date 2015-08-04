@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        var data = [0, 2, 3, 4, 5, 6];
+        var newData = data.filter(function(value, i){//第一个参数是元素的值，第二个参数是索引
+            console.log(i + ': '+ value);
+
+            if(i % 2 == 0){
+                //return value;
+                return true;
+            }
+
+        });
+
+        console.dir(newData);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

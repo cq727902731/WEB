@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //继承：继承、扩展、覆盖
+        var o = {x: 1};
+        /*var o = new Object();*/
+        //console.dir(o); //打印对象的详细信息：可以看到原型对象
+        //console.log(o.toString()); //所有对象都会继承原型对象中的属性，访问原型对象中的方法
+
+        var p = Object.create(o);
+        p.y = 2; //在原型的基础上扩展属性
+        console.dir(p); //可以看到原型链
+
+
+        console.log(p.x);//从原型o中继承的属性
+        console.log(p.y);//对象p中创建的属性
+
+        p.x = 3; //对属性重新定义，覆盖原型中的属性
+
+        console.log(p.toString());
+
+        p.toString = function(){//对属性重新定义，覆盖原型中的属性（引用方法的属性）
+          return '这是一个p：x的值是' + this.x;
+        };
+
+        console.log(p.toString());
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

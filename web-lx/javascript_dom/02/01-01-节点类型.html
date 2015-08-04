@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1 id="h1" title="I am title">What to buy</h1>
+
+    <script>
+
+        var h1 = document.getElementById('h1');
+        var title = h1.getAttributeNode('title');
+        var text = h1.childNodes[0];
+
+        console.log(h1.nodeType);
+        console.log(title.nodeType);
+        console.log(text.nodeType);
+
+    </script>
+</body>
+</html>

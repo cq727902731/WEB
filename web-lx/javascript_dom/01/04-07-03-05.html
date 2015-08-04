@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Script没有块级作用域</title>
+</head>
+<body>
+<script>
+    /*如果要将一个函数作为构造函数，那么函数名首写字母建议大写*/
+    function Person(mood,age){
+        console.log('Person');
+
+        if(!mood){
+            this.mood = 'happy'
+        }
+        if(!age){
+            this.age = 10;
+        }
+        this.mood = 'happy';
+        this.age = 10;
+        this.walk = function(){
+            console.log('walking');
+        };
+
+        this.sleep = function(){
+            console.log('sleeping');
+        }
+    }
+
+    //调用构造函数的三种方法
+    var p0 = Person;
+    var p1 = new Person();
+    var p2 = new Person;
+    p2.mood = 'sad';
+    console.log(p2.age);
+    p2.walk();
+    p2.sleep();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .parent>div{
+            float:left;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .footer{
+            background-color: yellow;
+        }
+
+        /*兼容低版本IE*/
+        .clearfix:before{ /*IE8不识别CSS3中的伪元素选择器的::,这里使用旧的写法:(一个冒号)*/
+            content: '';
+            display: block;
+        }
+        .clearfix:after{
+            content: '.';
+            display: block;
+            clear: both;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        .clearfix{
+            *zoom: 1;   /*兼容IE6、7*/
+        }
+        /*兼容所有低版本*//*
+        .clearfix:after {
+            content:"\200B";
+            display:block;
+            height:0;
+            clear:both;
+        }
+        .clearfix {
+            *zoom:1;
+        }*/
+    </style>
+</head>
+<body>
+<div class="parent clearfix">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="footer">footer</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var p = {x: 1};
+        var o = Object.create(p);
+
+        console.dir(p);
+        console.dir(o);
+
+        console.log(p.isPrototypeOf(o));//true:p是否是o的原型
+        console.log(Object.prototype.isPrototypeOf(p)); //true, 顶层原型是不是p的原型（Object.prototype表示顶层原型）
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

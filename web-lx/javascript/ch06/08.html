@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //为普通对象增加了属性，使其变为类数组对象
+        var a = {};
+        //添加一些数组必要的属性
+
+        var i = 0;
+        while(i < 10){
+
+            a[i] = i * i;
+            i++;
+        }
+        a.length = i;
+        console.dir(a);
+
+        //像数组一样遍历
+        for(var j = 0;j < a.length;j++){
+            console.log(a[j]);
+        }
+
+
+        //向类数组添加元素：
+        a[10] = 1000;
+        console.dir(a);//数组的长度不会自动改变
+        //将length属性变小
+        a.length = 5;
+        console.dir(a);//数组的元素不会因此而减少
+
+    </script>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <script>
+
+        //DOM元素列表
+        var divList = document.getElementsByTagName('div');
+
+        console.log(divList.length);
+        //divList.length = 1;//不可以
+        for(var i = 0;i < divList.length;i++){
+            console.dir(divList.length);
+
+            console.log(divList[i].constructor);
+        }
+
+        console.log(divList.constructor);
+        console.dir(HTMLCollection.prototype);
+
+        console.dir(divList.item());
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        try{//试一试
+
+            //这里的代码会从头执行到末尾
+            //如果发生异常，立即停止运行
+            //转到catch代码块继续执行
+            inputAge();
+
+        } catch(err){//捕获异常
+
+            //当try代码块中有异常发生时，这里的代码才会执行
+            //通过圆括号中定义的错误对象捕获异常
+            console.log(err);
+            console.log('出错了');
+
+        } finally{
+
+            console.log('finally');
+        }
+
+        console.log('程序执行完毕！');
+
+
+        function inputAge(){
+
+            var age = prompt('请输入您的年龄');
+            if(age < 0){
+                throw new Error('请输入一个正数');//抛出异常
+            }
+            console.log(age);
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

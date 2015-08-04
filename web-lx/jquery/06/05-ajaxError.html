@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<button class="trigger">Trigger</button>
+<div class="result"></div>
+<div class="log"></div>
+
+<script src="../jquery-1.6.4.js"></script>
+<script>
+    $(function () {
+
+        $(document).ajaxStart(function () {
+            $(".log").text("Loading...");
+        });
+
+        $(document).ajaxSuccess(function(evt, request, settings) {
+            $(".log").text("Success");
+        });
+
+        $(document).ajaxError(function () {
+            $(".log").text("Failed");
+        });
+
+        $("button.trigger").bind("click", function () {
+            $("div.result").load("login.html", function () {
+                $('#mask, #login').fadeIn(500);
+            });
+        });
+
+
+    });
+
+</script>
+</body>
+</html>

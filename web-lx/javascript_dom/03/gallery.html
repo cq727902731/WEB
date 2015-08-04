@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="styles/layout.css">
+</head>
+<body>
+    <button onclick="changetitle()">改标题</button>
+    <button onclick="findTag()">找标签</button>
+    <h1 title="Snapshots">
+        <span>Snapshots</span>
+        <span></span>
+    </h1>
+    <ul id="gallery">
+        <li>
+            <a href="images/bigben.jpg" title="the famous clock">
+                <img src="images/thumbnail_bigben.jpg" alt="Big ben">
+            </a>
+        </li>
+        <li>
+            <a href="images/coffee.jpg" title="A cup of black coffee">
+                <img src="images/thumbnail_coffee.jpg" alt="Coffee">
+            </a>
+        </li>
+        <li>
+            <a href="images/fireworks.jpg" title="a fireworks display">
+                <img src="images/thumbnail_fireworks.jpg" alt="Fireworks">
+            </a>
+        </li>
+        <li>
+            <a href="images/rose.jpg" title="A red,red rose">
+                <img src="images/thumbnail_rose.jpg" alt="Rose">
+            </a>
+        </li>
+    </ul>
+    <!--<img  id="placeholder" src="http://fakeimg.pl/400x300/ff0000,128/000,255/?text=USED by CQ&font=lobster">-->
+    <!--<img src="images/placeholder.png" id="placeholder">
+    <p id="description">Choose an image.</p>-->
+    <script src="javascript/showPic.js"></script>
+</body>
+</html>

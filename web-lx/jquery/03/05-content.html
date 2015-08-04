@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="show"><b><i>Write Less Do More</i></b></div>
+<div></div>
+<div></div>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+
+        var str = $('#show').html();
+        console.log(str);
+
+        var strText = $('#show').text();
+        console.log(strText);
+
+        $('#html').html(str);
+        $('#text').html(str);
+    });
+</script>
+</body>
+</html>

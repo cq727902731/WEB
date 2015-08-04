@@ -1,0 +1,14 @@
+.header{
+    background-color: black;
+    color: #fff;
+}
+
+.main{
+    background-color: darkred;
+    color: #0079BE;
+}
+
+.footer{
+    background-color: yellow;
+    color: #fff;
+}

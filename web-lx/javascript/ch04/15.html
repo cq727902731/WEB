@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        function f(){
+
+            //使用省略的语法：document.f1.username.value => username.value
+            with(document.f1){
+                var username1 = username.value;
+                var password1 = password.value;
+                console.log(username1);
+                console.log(password1);
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="f1" action="">
+
+    <input type="text" name="username">
+    <input type="password" name="password">
+
+    <input type="button" value="按钮" onclick="f()">
+</form>
+</body>
+</html>

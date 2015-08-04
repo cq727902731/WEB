@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 600px;
+            height: 400px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        th{
+            border: 1px solid darkblue;
+            background-color: lightblue;
+            color: darkblue;
+        }
+        td{
+            border: 1px solid darkblue;
+        }
+    </style>
+
+    <script src="library.js"></script>
+</head>
+<body>
+
+<h1>网站标题</h1>
+<div>
+    <label for="year">请选择年：</label>
+    <select id="year" onchange="loadCalendar()">
+        <script>
+            for(var a = 2000; a <= 2100; a++){
+                document.write('<option value="' + a + '">' + a + '年</option>');
+            }
+        </script>
+    </select>
+    <label for="month">请选择月：</label>
+    <select id="month" onchange="loadCalendar()">
+        <script>
+            for(var a = 1; a <= 12; a++){
+                document.write('<option value="' + a + '">' + a + '月</option>');
+            }
+        </script>
+    </select>
+</div>
+
+<table id="calendar">
+    <script>
+        loadCalendar();
+    </script>
+</table>
+
+
+
+<p>------------页脚---------------</p>
+
+</body>
+</html>

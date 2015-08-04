@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .parent{
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        #d1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div id="d1" style="left: 0; top: 0;"></div>
+</div>
+
+<button id="b1">动！</button>
+<script>
+
+    var b1 = document.getElementById('b1');
+    b1.onclick = function(){
+        var d1 = document.getElementById('d1');
+
+        var timer = setInterval(step, 10);
+
+        function step(){
+            console.log(d1.style.top);
+            if(parseInt(d1.style.top) >= 200){
+                clearInterval(timer);
+            }
+            d1.style.top = parseInt(d1.style.top) + 1 + 'px';
+            d1.style.left = parseInt(d1.style.left) + 1 + 'px';
+        }
+    }
+</script>
+</body>
+</html>

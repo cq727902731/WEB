@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var o = {x: 1};
+        console.log(o.toString());//调用原型的toString()方法
+
+
+        var e = new Error();
+        console.log(e.toString());//Error类覆盖了原型的toString()方法
+
+
+        var d = new Date();
+        console.log(d.toString());//Date类覆盖了原型的toString()方法
+        console.log(d);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

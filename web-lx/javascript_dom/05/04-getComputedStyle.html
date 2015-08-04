@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .d1{
+            width: 100px;
+            height: 100px;
+            background-color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="d1" class="d1" style="background-color: red;color: yellow"></div>
+
+    <script>
+
+        var d1 = document.getElementById('d1');
+        var computedStyle = window.getComputedStyle(d1);
+        console.dir(computedStyle);
+    </script>
+</body>
+</html>

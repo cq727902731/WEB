@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+
+    var product = {id:1,name:"牛仔裤",price:100};
+    for(pro in product){
+        console.log(product[pro]);
+    }
+
+    var point = {x:1,y:2};
+    var point3d = Object.create(point);
+    point3d.z = 10;
+
+    console.dir(point3d);
+
+    for(pro in point3d){
+        if(point3d.hasOwnProperty(pro)){
+            console.log(point3d[pro]);
+        }
+    }
+
+</script>
+</body>
+</html>

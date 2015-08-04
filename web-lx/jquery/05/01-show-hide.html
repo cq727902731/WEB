@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<button>按钮</button>
+<div>content</div>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+
+        $('button').click(function () {
+
+            $('div').hide('slow', function () {
+                alert('结束');
+            });
+        });
+    });
+</script>
+</body>
+</html>

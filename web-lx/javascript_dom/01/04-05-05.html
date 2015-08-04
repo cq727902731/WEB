@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    //instanceof 第一个操作数是否是第二个操作数的一个实例
+    var a = {};
+    console.log(a instanceof Object);   //true
+    console.log(a instanceof Array);    //false
+
+    //delete
+    var p = {'name' : 'Paul',age:30};
+    console.dir(p);
+    delete p.age;//删除对象的属性
+    console.log(p);
+    p.sex = 'male';//增加对象的属性
+    console.log(p);
+
+</script>
+
+</body>
+</html>

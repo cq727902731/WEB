@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        label{
+            display: inline-block;
+            width: 50px;
+        }
+        .form div{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="form2.html" method="get">
+        <div class="form">
+            <div>
+                <label for="username">用户名</label><input id="username" type="text" name="username" value="游客">
+            </div>
+            <div>
+                <label for="password">密码</label><input id="password" type="text" name="password" >
+            </div>
+            <div>
+                <label>性别</label>
+                <input type="radio" id="male" name="sex" value="1" checked><label for="male">男</label>
+                <input type="radio" id="female" name="sex" value="2"><label for="female">女</label>
+            </div>
+            <div>
+                <label >爱好</label>
+                <input type="checkbox" id="football" name="hobby" value="1" checked><label for="football">足球</label>
+                <input type="checkbox" id="basketball" name="hobby" value="2"><label for="basketball">篮球</label>
+            </div>
+            <div>
+                <label for="city">城市</label>
+                <select name="city" id="city">
+                    <!--<option value=""></option>-->
+                    <option value="1">北京</option>
+                    <option value="2">哈尔滨</option>
+                    <option value="3" selected>双鸭山</option>
+                </select>
+            </div>
+            <div>
+                <label for="course">课程</label>
+                <select name="course" id="course" multiple>
+                    <option value="1">HTML/CSS</option>
+                    <option value="2">JavaScript</option>
+                    <option value="3" selected>jQuery</option>
+                </select>
+            </div>
+            <div>
+                <input type="button" value="普通按钮">
+                <input type="submit" value="提交按钮">
+                <input type="reset" value="重置">
+                <input type="image" src="">
+                <button type="button"></button>
+            </div>
+            <div>
+                <label for="file">附件</label>
+                <input type="file" id="file">
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

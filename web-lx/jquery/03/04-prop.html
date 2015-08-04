@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<input type="checkbox" checked="checked">
+<input type="text" maxlength="10">
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+
+        /*$('input').attr('checked','checked');*/
+
+        var $checkbox = $('input[type = checkbox]');
+        $checkbox.attr('checked',true);
+
+        var $input = $('input[type = text]');
+        console.log(typeof $input.prop('maxlength'));
+        console.log(typeof $input.attr('maxlength'));
+        $input.attr('maxlength',20);
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .item-1{
+             color: orangered;
+         }
+
+        .item-2{
+            color: yellowgreen;
+        }
+
+        .item-3{
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+</ul>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+        $('ul li').addClass(function() {
+            /*return 'item-'+ (index + 1);*/
+            return 'item-' + $(this).index();
+        });
+    });
+
+</script>
+</body>
+</html>

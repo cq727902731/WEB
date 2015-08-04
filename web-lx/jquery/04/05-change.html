@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<select id="country"><option>请选择</option></select>
+<select id="province"><option>请选择</option></select>
+<select id="city"><option>请选择</option></select>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+
+        var arrData = [
+            {
+                "id":1,
+                "name":"中国",
+                "provinces":[
+                    {
+                        "id":11,
+                        "name":"黑龙江",
+                        "cities": [{"id":111,"name":"哈尔滨"},{"id":112,"name":"大庆"}]
+                    },
+                    {
+                        "id":12,
+                        "name":"辽宁",
+                        "cities": [{"id":121,"name":"沈阳"},{"id":122,"name":"大连"}]
+                    }
+                ]
+            },
+            {
+                "id":2,
+                "name":"美国",
+                "provinces":[
+                    {
+                        "id":21,
+                        "name":"德克萨斯",
+                        "cities": [{"id":211,"name":"休斯顿"},{"id":212,"name":"达拉斯"}]
+                    },
+                    {
+                        "id":22,
+                        "name":"加利福尼亚",
+                        "cities": [{"id":221,"name":"洛杉矶"},{"id":222,"name":"旧金山"}]
+                    }
+                ]
+
+            }
+        ];
+
+        $.each(arrData, function (index,item) {
+            $('#country').append($('<option>').html(item.name).attr('value',item.id));
+
+            /*var o = new Option(item.name,item.id);
+            $('#country').append($(o));*/
+
+            /*var o = new Option(item.name,item.id);
+            document.getElementById('country').add(o);*/
+
+        });
+        
+        $('#country').change(function () {
+
+            $('select#province option:not(:first)').remove();
+            $('select#city option:not(:first)').remove();
+
+            var currentCountry = $('select#country option:selected');
+            $.each(arrData, function (index, country) {
+                if(country.id == currentCountry.val()){
+                    var provinces = country.provinces;
+                    $.each(provinces, function (index,province) {
+                        var p = new Option(province.name, province.id);
+                        $('#province').append(p);
+                    });
+                }
+            });
+        });
+
+        $('#province').change(function () {
+
+            $('select#city option:not(:first)').remove();
+
+            var currentCountry = $('select#country option:selected');
+            var currentProvince = $('select#province option:selected');
+            $.each(arrData, function (index, country) {
+                if(country.id == currentCountry.val()){
+                    var provinces = country.provinces;
+
+                    $.each(provinces, function (index,province) {
+
+                        if(province.id == currentProvince.val()){
+                            var cities = province.cities;
+
+                            $.each(cities, function (index, city) {
+                                var c = new Option(city.name, city.id);
+                                $('#city').append(c);
+                            });
+                        }
+                    });
+                }
+            });
+        });
+
+    });
+</script>
+</body>
+</html>

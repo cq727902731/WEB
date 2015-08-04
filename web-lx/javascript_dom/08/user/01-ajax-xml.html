@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <h1>AJAX</h1>
+    <button id="btn">查看信息</button>
+    <div id="info"></div>
+    <script>
+
+        document.getElementById('btn').onclick = function(){
+
+            //AJAX的创建步骤
+            //1、创建对象：XMLHttpRequest
+            var xmlHttp;
+            if(window.XMLHttpRequest){
+                xmlHttp = new XMLHttpRequest();//ff,chrome,Opera,Safari,IE7+
+            }else{
+                xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+            }
+
+            //2、初始化:XMLHttpRequest对象：open
+            xmlHttp.open('GET','user.xml',true);//true:异步
+
+            //3、发送请求：send(post、get)
+            xmlHttp.send();
+
+            //4、获取服务器响应：（同步、异步）
+            xmlHttp.onreadystatechange = function(){
+                console.log(xmlHttp.readyState);
+                console.log(xmlHttp.status);
+                if(xmlHttp.status == 200 && xmlHttp.readyState == 4){
+                    console.log('接收响应成功');
+
+                    //5、处理相应（纯文本、json、xml）
+                    console.log(xmlHttp.responseXML);
+                    var userList = xmlHttp.responseXML.getElementsByTagName('user');
+                    var name = userList[0].getElementsByTagName('name')[0].textContent;
+                    var age = userList[0].getElementsByTagName('age')[0].textContent;
+                    var married = userList[0].getElementsByTagName('married')[0].textContent;
+                    var str = name + ' ' + age + ' ' + married;
+                    document.getElementById('info').innerHTML = str;
+
+                }else{
+                    console.log('接收响应失败');
+                }
+            };
+        }
+    </script>
+
+</body>
+</html>

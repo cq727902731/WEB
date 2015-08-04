@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    function multiply(){
+        console.log(arguments.length);
+        var result = 1;
+        for(var i = 0;i < arguments.length;i++){
+            if(isNaN(parseFloat(arguments[i]))){
+                continue;
+            }
+            result = result * arguments[i];
+        }
+        return result;
+    }
+    console.log(multiply(2,4.8,'C',10,'a'));
+
+</script>
+
+</body>
+</html>

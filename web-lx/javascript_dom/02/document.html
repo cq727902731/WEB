@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <h1>what to buy</h1>
+    <p title="a gentle reminder">
+        Don't forget to buy this stuff.
+    </p>
+    <ul id="purchases">
+        <li>A tin of beans</li>
+        <li class="sale">Cheese</li>
+        <li class="sale important">Milk</li>
+    </ul>
+
+    <script>
+
+        //1.getElementsById: 通过获取一个节点，只能通过document对象调用
+        var purchases = document.getElementById('purchases');
+        console.dir(purchases);
+
+        //2.getElementsByTagName：通过标签名获取节点列表,
+            //（1）可以通过document对象调用
+        var liList = document.getElementsByTagName('li');
+        console.dir(liList);
+        for(var i = 0;i < liList.length; i++){
+            console.log(liList[i]);
+        }
+            //（2）可以通过其他元素节点对象调用，缩小查询范围，提高查询效率
+        var liList2 = purchases.getElementsByTagName('li');
+        console.dir(liList2);
+        for(var i = 0;i < liList2.length; i++){
+            console.log(liList2[i]);
+        }
+            //（3）通配符'*'可以获取查找范围内的所有节点
+        var allTags = document.getElementsByTagName('*');
+        console.dir(allTags);
+        console.log(purchases.getElementsByTagName('*').length);//4
+
+        //3.getElementsByClassName：通过类名获取元素列表
+        var saleList = purchases.getElementsByClassName('sale');
+        console.dir(saleList);
+
+        var importantSaleList = purchases.getElementsByClassName('sale');
+        console.dir(importantSaleList);
+
+        ////////////////////////////////////////////////////////////////////
+
+        //1、使用 运算符
+        var pList = document.getElementsByTagName('p');
+        for(var i = 0; i < pList.length; i++){
+            pList[i].title = 'new title';
+            console.log(pList[i].title);
+
+            pList[i].setAttribute('title','new new title');
+            console.log(pList[i].getAttribute('title'));
+        }
+    </script>
+</body>
+</html>

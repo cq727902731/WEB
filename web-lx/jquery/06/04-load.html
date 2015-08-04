@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    #mask{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0.5;
+    }
+    #login{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #ffffff;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+</style>
+
+<body>
+
+<button>登录</button>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+
+        $('button').click(function(){
+
+            /*$.get('login.html',function(result){
+             $("#area").html(result);
+             $("#mask,#login").html(result);
+             $("#mask,#login").fadeIn(500)
+
+             },'text');*/
+            $('#area').load('login.html',function(){
+                $("#mask,#login").fadeIn(500);
+            });
+        });
+    })
+</script>
+
+<div id="area"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var a = '100';
+        var b = 100;
+        console.log(a == b);//只比较内容
+        console.log(a === b);//既比较内容，又比较数据类型
+
+        //null、undefined、NaN 和false比较时不想等
+        console.log(false == null);
+        console.log(false == undefined);
+        /*console.log(false == NaN);*/
+
+        console.log(false === null);
+        console.log(false === undefined);
+        /*console.log(false === NaN);*/
+
+
+        console.log(true == 1);
+        console.log(false == 0);
+
+        //null、undefined、NaN用在布尔表达式中时相当于false
+        var x = parseInt('a');
+        console.log(x);
+        if(x){
+            console.log('真');
+        }else{
+            console.log('假');
+        }
+
+
+        //用在布尔表达式中 非（0、''、null、undefined、NaN、false） 既是true
+        var y = '0';//真
+        if(y){
+            console.log('真');
+        }else{
+            console.log('假');
+        }
+
+        //判断一个数是否是 NaN的时候 ，要使用isNaN()函数
+        var z = parseInt('a');
+        console.log(z);
+        if(isNaN(z)){
+            console.log('不是数字');
+        }else{
+            console.log('是数字');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //按位与：先把操作数转换成位表示法，然后按位进行比较：1表示true，0表示false
+        var a = 1;
+        var b = 0;
+        var c = a & b;
+        console.log(c); // 0
+
+        //按位或：
+        var d = a | b;
+        console.log(d); // 1
+
+        //按位非：
+        var e = ~a;
+        console.log(e);
+
+
+        //按位异或：相同为假，不同为真
+        var x = 1;
+        var y = 0;
+        var z = x ^ y;
+        console.log(z); // 1
+
+
+        var j = true;
+        var k = false;
+        console.log(j ^ k); // 1
+
+
+        //左移运算 <<  空位用0填充
+        var iOld = 2;		//等于二进制 10
+        var iNew = iOld << 5;	//等于二进制 1000000 十进制 64
+        console.log(iNew);
+
+        //有符号右移运算 >>
+        var aOld = 8;
+        var aNew = aOld >> 1;
+        console.log(aNew); //4
+
+        //有符号右移运算 >>  符号位不动，空位用符号位填充
+        var bOld = -8;
+        var bNew = bOld >> 1;
+        console.log(bNew); //-4
+
+        //无符号右移　>>>  将-8转换成二进制后，移位时32位整体移动，不考虑符号，前面用0填充
+        var cOld = -8;
+        var cNew = cOld >>> 1;
+        console.log(cNew); //2147483644
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

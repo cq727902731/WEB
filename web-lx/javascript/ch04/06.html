@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*从1到10*/
+        var a = 1;//循环初始化
+        do{
+            console.log(a);
+            a++;//循环的迭代
+        }while(a <= 10);//循环的临界条件
+
+
+        /*无论循环临界条件是否返回true，都先执行一次循环语句块中的代码*/
+        var b = 10;
+        do{
+            console.log(b);
+        }while(b < 10);
+
+
+        /*练习：1-100 之间的5的倍数*/
+        var c = 1;//循环初始化
+        do{
+            if(c % 5 == 0){
+                console.log(c);
+            }
+            c++;
+        }while(c <= 100);//循环的临界条件
+
+
+        /*练习：1+2+3+...+100=? */
+        var d = 1;
+        var sum = 0;
+        do{
+            //console.log(sum);
+            sum += d;
+            d++;
+        }while(d <= 100);
+        console.log(sum);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

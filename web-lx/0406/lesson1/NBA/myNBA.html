@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>myNBA</title>
+    <link rel="stylesheet" href="style2.css"/>
+</head>
+<body>
+    <div class="login-bar">
+        <div class="inner-bar">
+            <a href="#" class="qq">QQ登陆</a>
+            <a href="#" class="wb">微博登陆</a>
+        </div>
+    </div>
+    <div class="big-box">
+        <div class="header">
+            <h1><img src="images/NBA.png"></h1>
+            <ul class="nav">
+                <li><a href="NBA-NEWS.html">主页</a></li>
+                <li><a href="myNBA.html">发布新闻</a></li>
+                <li><a href="">NBA视频</a></li>
+                <li><a href="">直播视频</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <form action="../form/form2.html">
+                <h2>发布新闻</h2>
+                <div>
+                    <label for="新闻标题">新闻标题</label>
+                    <input type="text" name="新闻标题" id="新闻标题">
+                </div>
+                <div>
+                    <label for="file">请选择图片</label>
+                    <input type="file" id="file">
+                </div>
+                <div>
+                    <label>新闻类型</label>
+                    <input type="radio" id="原创" name="原创" value="1" checked><label for="原创">原创</label>
+                    <input type="radio" id="转载" name="转载" value="1"><label for="转载">转载</label>
+                </div>
+                <div>
+                    <label for="新闻介绍">新闻介绍</label>
+                    <textarea name="新闻介绍" id="新闻介绍" cols="100" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="新闻内容">新闻内容</label>
+                    <textarea name="新闻内容" id="新闻内容" cols="100" rows="20"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" id="订阅新闻邮件" name="订阅新闻邮件" value="1" checked><label for="订阅新闻邮件">订阅新闻邮件</label>
+                </div>
+                <div>
+                    <input type="submit" value="发布">
+                    <input type="reset" value="重新填写">
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <h2>版权声明</h2>
+            <p>Copyright © 1996-2015 SINA Corporation, All Rights Reserved</p>
+        </div>
+    </div>
+
+</body>
+</html>

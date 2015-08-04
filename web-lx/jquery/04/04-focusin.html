@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<p><input type="text"/><span>focusout fire</span></p>
+<p><input type="password"/><span>focusout fire</span></p>
+
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+
+        $("p").focus(function () {
+            $(this.find("span").css('display','inline').fadeOut(1000));
+        });
+    });
+
+</script>
+</body>
+</html>

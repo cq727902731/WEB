@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <form name="f1" action="insert.json" enctype="application/x-www-form-urlencoded">
+
+        <p><label for="name">课程名称</label><input type="text" name="name" id="name"></p>
+        <p><label for="teacher">授课教师</label><input type="text" name="teacher" id="teacher"/></p>
+        <p><button id="">保存</button></p>
+    </form>
+    <div id="lessons">
+        <!--<div><span>java</span><span>cohen</span></div>-->
+    </div>
+
+    <script src="../js/json2.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script>
+
+        document.f1.onsubmit = function(event){
+
+            console.dir(event);
+            event.preventDefault();
+
+            post(this.action,function(xmlHttp){
+
+                var data = JSON.parse(xmlHttp.responseText);
+                if(data.result){
+
+                    var lessons = document.getElementById('lessons');
+                    var lesson = document.createElement('div');
+                    lessons.appendChild(lesson);
+
+                    var spanLesson = document.createElement('span');
+                    lesson.appendChild(spanLesson);
+                    spanLesson.innerHTML = document.f1.name.value;
+
+                    var spanTeacher = document.createElement('span');
+                    lesson.appendChild(spanTeacher);
+                    spanTeacher.innerHTML = document.f1.teacher.value;
+
+                }else{
+                    alert(data.message);
+                }
+
+            },'name=' + document.f1.name.value + ' ' + '&teacher=' + document.f1.teacher.value);
+
+        };
+    </script>
+
+</body>
+</html>

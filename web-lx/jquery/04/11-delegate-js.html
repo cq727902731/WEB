@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<ul id="u">
+    <li><a href="images/img01.jpg"></a></li>
+    <li><a href="images/img02.jpg"></a></li>
+    <li><a href="images/img03.jpg"></a></li>
+</ul>
+
+<img src="images/logo.gif" alt="logo"/>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+
+        /*document.getElementById('u').onclick = function (event) {
+
+            if(!event){
+                event = window.event;//兼容IE8及以下
+            }
+
+            var target;
+            if(event.target){
+                target = event.target;
+            }else{//兼容IE8及以下
+                target = event.srcElement;
+            }
+
+            document.getElementById('img').src = target.href;
+            return false;
+        }*/
+
+        $('#u').delegate('a','click', function (event) {
+
+            var target = event.target;
+            $('#img').attr('src',target.href);
+            event.preventDefault();
+
+        });
+
+    });
+
+</script>
+</body>
+</html>

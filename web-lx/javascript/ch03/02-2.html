@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>局部变量</title>
+
+    <script>
+        
+        f();
+
+        //不能被访问
+        console.log('函数外部访问局部变量：' + b);
+
+        function f(){
+
+            var b = 200;
+            console.log('函数内部访问局部变量：' + b);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        html,body{
+            margin: 0;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            height: 100%;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header,.footer{
+            line-height: 100px;
+            background-color: greenyellow;
+            color: #000;
+        }
+
+        .main{
+            background-color: #336699;
+        }
+
+        .side{
+            background-color: #D65C00;
+        }
+
+        .body{
+            flex-grow: 1;
+            display: flex;
+        }
+
+        .side{
+            width: 200px;
+        }
+
+        .main{
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">head</div>
+    <div class="body">
+        <div class="main">main</div>
+        <div class="side">side</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>

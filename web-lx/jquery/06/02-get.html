@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<form action="" name="f1">
+    <input type="text" name="username" id="username" value="admin">
+    <input type="password" name="password" id="password" value="123">
+</form>
+
+<div id="products"></div>
+<body>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+
+        $.get("products.json",
+                $(document.f1).serialize(),
+                function (result) {
+                    console.log(result);
+                },
+                'json');
+
+        console.log(CQ);
+    });
+
+</script>
+</body>
+</html>

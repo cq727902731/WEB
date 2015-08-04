@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*alert('hello');*/
+        var input = prompt('请输入一个幸运数字');
+        /*console.log(input);
+        console.log(typeof input);*/ //string
+
+        /*input = Number(input);//不输入=0   取消=0
+        console.log(input);
+        console.log(typeof input);// 如果先判断无论输入什么内容打印的都是 number
+
+        if(!isNaN(input)){
+            console.log('是数字');
+        }else{
+            console.log('不是数字');
+        }*/
+
+        //要求：
+        //如果输入的是一个数字：就打印这个数字  typeof input == 'number'
+        //如果用户什么都没输入，或点击取消按钮，就提示用户：请输入一个幸运数字  input === '' || input === null
+        //如果用户输入了信息，但是不是一个数字，就提示用户：您输入的不是数字
+        if(input === '' || input === null){
+            console.log('请输入一个幸运数字');
+        }else{
+            input = Number(input);
+            if(isNaN(input)){
+                console.log('您输入的不是数字');
+            }else{
+                console.log('您的幸运数字是：' + input);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

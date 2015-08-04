@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        #products .id{
+
+            display: inline-block;
+            width: 50px;
+            color: orangered;
+        }
+
+        #products .name{
+            display: inline-block;
+        }
+
+        #products .price{
+            display: inline-block;
+            color: orangered;
+            font: bold 20px 微软雅黑 sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="products">
+
+        <!--<ul>
+            <li>
+                <span>1</span>
+                <span>商品名</span>
+                <span>价格</span>
+            </li>
+            <li><span>1</span><span>商品名</span><span>价格</span></li>
+            <li><span>1</span><span>商品名</span><span>价格</span></li>
+        </ul>-->
+    </div>
+    <script src="../js/json2.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script>
+        function loadProducts(xmlHttp){
+
+            var products = JSON.parse(xmlHttp.responseText);
+            var ul = document.createElement('ul');
+            var div = document.getElementById('products');
+            div.appendChild(ul);
+            for(var i = 0; i < products.length; i++){
+                var product = products[i];
+                var li = document.createElement('li');
+                ul.appendChild(li);
+                /*var span1 = document.createElement('span');
+                span1.innerHTML = product.id;
+                li.appendChild(span1);
+                var span2 = document.createElement('span');
+                span2.innerHTML = product.name;
+                li.appendChild(span2);
+                var span3 = document.createElement('span');
+                span3.innerHTML = product.price;
+                li.appendChild(span3);*/
+                for(pro in product){
+                    var span = document.createElement('span');
+                    span.className = pro;
+                    span.innerHTML = product[pro];
+                    li.appendChild(span);
+                }
+
+                var btn = document.createElement('button');
+                btn.onclick = function () {
+
+                    var liId = this.parentNode.id;
+                    var id = liId.substring(liId.indexOf('_') + 1,liId.length);
+
+                    get('delete.json?id=' + id,delProduct);
+
+                    var thisBtn = this;
+                    function delProduct(xmlHttp){
+                        var data = JSON.parse(xmlHttp.responseText);
+                        if(data.result){
+                            thisBtn.parentNode.parentNode.removeChild(thisBtn.parentNode);
+                        }else{
+                            alert(data.message);
+                        }
+                    }
+                };
+                btn.innerHTML = '删除';
+                li.appendChild(btn);
+            }
+        }
+
+        get('products.json',loadProducts);
+
+    </script>
+
+</body>
+</html>

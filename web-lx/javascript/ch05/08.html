@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var o = {x: 1, y: 2};
+        console.log(o.constructor);//输出构造函数：function Object(){}
+
+        var o1 = new Object();//构造函数是Object
+
+
+        var d1 = new Date();
+        console.log(d1.constructor);//输出构造函数：function Date(){}
+        console.log(typeof d1.constructor);//function
+
+
+        //判断一个对象是否是某一个类型
+        if(d1.constructor == Date){
+            console.log('d1是日期对象');
+        }
+
+        //是否是某个类的实例
+        if(d1 instanceof Date){//如果类名是父类也可以，如Ｏbject
+            console.log('是日期对象');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

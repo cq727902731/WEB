@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    //1、字符串:string
+
+    //可以使用单引号和双引号，可以包含0-多个字符
+    var mood = 'happy';
+    var mood1 = 'happy';
+
+    //使用转义符,或单引号和双引号结合使用
+    var sentence = 'I\'m ChangYU';
+    var sentence1 = "I'm ChangYU";
+    var sentence2 = 'she said: "I\'m ChangYu"';
+
+    //2、数值:number
+    var age = 10;
+    var age1 = 10.25;
+
+    //3、布尔值
+    var sleeping = true;
+    var run = false;
+
+    //4、null
+    var money = null;
+    var h1 = document.getElementById('title');
+    console.log(h1);//如果文档中还没有载入title标签，那么h1变量的值就是null
+
+    //5、undefined
+    var time;
+    console.log(time);//只声明但是没有初始值的变量
+
+</script>
+
+    <h1 id="title">页面标题</h1>
+
+</body>
+</html>

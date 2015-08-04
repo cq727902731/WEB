@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        div:hover img{
+            transform: translate(300px);
+        }
+
+        .i0{
+            transition: 2s linear;
+        }
+
+        .i1{
+            transition: 2s steps(3,start);
+        }
+
+        .i2{
+            transition: 2s steps(3,end);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img class="i0" src="images/basketball.png" ><br>
+        <img class="i1" src="images/basketball.png" ><br>
+        <img class="i2" src="images/basketball.png" >
+    </div>
+</body>
+</html>

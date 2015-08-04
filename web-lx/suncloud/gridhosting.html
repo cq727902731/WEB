@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--//兼容IE的   手机端-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--响应式布局-->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/other.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="lib/shim/html5shiv.min.js"></script>//这两个是兼容和做响应式布局的
+    <script src="lib/shim/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top yun-header">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="line"><img src="img/logo.png" alt=""/></div>
+            <div class="h-content">
+                <span>欢迎,</span><a href="#">cuiqiang@qq.com</a><span>登录</span>
+            </div>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 sidebar">
+            <div class="black">控制台首页</div>
+                <ul class="nav nav-sidebar">
+                    <li><a href="gridhosting.html">云主机<img src="img/arrow-up.png" alt=""/></a></li>
+                    <li><a href="">云硬盘<img src="img/arrow-up.png" alt=""/></a></li>
+                    <li><a href="">负载均衡<img src="img/arrow-up.png" alt=""/></a></li>
+                    <li><a href="">关系数据库<img src="img/arrow-up.png" alt=""/></a></li>
+                    <li><a href="">CDN<img src="img/arrow-up.png" alt=""/></a></li>
+                    <li><a href="">监控宝<img src="img/arrow-up.png" alt=""/></a></li>
+                    <li><a href="">DNS<img src="img/arrow-up.png" alt=""/></a></li>
+                </ul>
+            <div class="black">个人中心</div>
+            <div class="kong"></div>
+            <div class="help">
+                <img src="img/question.png" alt="" class="question-pic"/>
+                <div class="question">帮助中心</div>
+            </div>
+            <hr/>
+            <form class="form-inline">
+                <div class="form-group has-success has-feedback">
+                    <input type="text" placeholder="输入您的问题" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess4Status">
+                    <img src="img/search.png" class="glyphicon glyphicon-ok form-control-feedback" alt=""/>
+                </div>
+            </form>
+            <hr/>
+        </div>
+        <div class="col-md-10">
+            <div class="mainframe-body yun-margin">
+                <div class="panel-body">
+                    <h3>云主机</h3>
+                    <p>我们提供一种随时获取的、弹性的计算能力，这种计算能力的体现就是主机，主机就是配置好了的服务器，它有您期望的硬件配置、操作系统和网络配置。
+                        通常情况下，您的请求可以在10秒都60秒的时间内完成，所以您完全可以动态地、按需使用计算能力。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="yun-margin">
+                    <div class="col-md-7">
+                        <button type="button" class="btn btn-success" aria-label="Left Align" style="background: linear-gradient(#fc983e,#fd7a05);border: none">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            创建主机
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span  id="open_host" class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                            开机
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                            关机
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            断点
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                            重启
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            应急登陆（VNC）
+                        </button>
+                        <button type="button" class="btn btn-default yun-black" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="col-md-3 yun-right">
+                        <div class="input-group ">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="yun-border yun-margin">
+                <table class="table yunlist" width="95%">
+                    <thead>
+                        <tr>
+                            <th width="100px"><input id="chkAll" type="checkbox"></th>
+                            <th width="300px">云服务器名称</th>
+                            <th width="300px">内网IP</th>
+                            <th width="300px">外网IP</th>
+                            <th width="300px">状态</th>
+                            <th width="300px">到期时间</th>
+                            <th width="300px">云防护</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" id="item_1" name="item_1"></td>
+                            <td>阳光方案游戏云</td>
+                            <td>192.168.150.1</td>
+                            <td>192.168.150.1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="item_2" name="item_2"></td>
+                            <td>阳光方案游戏云</td>
+                            <td>192.168.150.2</td>
+                            <td>192.168.150.1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="item_3" name="item_3"></td>
+                            <td>阳光方案游戏云</td>
+                            <td>192.168.150.3</td>
+                            <td>192.168.150.1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="item_4" name="item_4"></td>
+                            <td>阳光方案游戏云</td>
+                            <td>192.168.150.4</td>
+                            <td>192.168.150.1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <!--<td colspan="3">选中条目：<input id="count" type="text">条</td>-->
+                            <td colspan="3">选中条目：<span id="selectedLength"></span>条</td>
+                            <td colspan="4">每页显示数</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/jquery/jquery-1.11.3.js"></script>
+<script src="lib/jquery/jquery-1.11.3.min.js"></script>
+<script src="lib/jquery/jquery-1.11.3.min.map"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+<script>
+    /*$('table.table tbody :checkbox').each(function () {
+        $("#chkAll").click(function () {
+            if(this.checked){
+                $('table.table tbody :checkbox').prop('checked',true);
+            }else {
+                $('table.table tbody :checkbox').prop('checked',false);
+
+            }
+            $("#count").val($('tbody :checked').length);
+        });
+        $(this).click(function () {
+            if($(this).is(':checked')){
+                $(this).attr('checked',true).siblings().attr('checked',false);
+            }else{
+                $(this).attr('checked',false).siblings().attr('checked',false);
+            }
+            $("#count").val($('tbody :checked').length);
+        });
+    });*/
+
+    $(function () {
+
+        //获取节点
+        var $selectedLength = $('#selectedLength');
+        var $open_host = $('#open_host');
+        var $chkAll = $('#chkAll');
+        var $items = $('table.table tbody :checkbox');
+
+        //设置默认状态
+        $selectedLength.text(0);
+        $open_host.prop('disabled',true);
+
+        $chkAll.click(function () {
+
+            //全选
+            $items.prop('checked',this.checked);
+
+            //选中数量
+            var $checkedItems = $items.filter(':checked');
+            $selectedLength.text($checkedItems.length);
+
+            //按钮状态
+            $open_host.prop('disabled', !$checkedItems.length);
+        });
+
+        $items.click(function () {
+
+            //选中数量
+            var $checkedItems = $items.filter(':checked');
+            $('#selectedLength').text($checkedItems.length);
+
+            //是否全选
+            $chkAll.prop('checked',$checkedItems.length == $items.length);
+
+            //按钮状态
+            $open_host.prop('disabled', !$checkedItems.length);
+        })
+
+    });
+</script>
+</html>

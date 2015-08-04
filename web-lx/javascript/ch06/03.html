@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //添加元素
+        //方法1：为新索引赋值
+        var a = [];
+        a[0] = 'zero'; //添加第一个元素
+        a[1] = 'one';  //添加第二个元素
+
+
+        //方法2：使用push方法
+        var l = a.push('two'); //添加到数组末尾
+        console.log(l); //返回新的数组的长度
+        a.push('three', 'four'); //一次添加多个元素
+
+        //方法3：使用unshift方法
+        a.unshift('a'); ////添加到数组开始
+
+        console.log(a);
+        console.dir(a);
+
+        //方法4：使用splice方法（添加和删除数组）
+        var students = ['学生1', '学生2', '学生3', '学生4', '学生5', '学生6'];
+        //students = ['学生1', '学生2', '学生7', '学生8', '学生5', '学生6'];
+        var items = students.splice(2, 2, '学生7', '学生8', '学生9');
+        console.log(students);
+        console.log(items);
+
+
+        //删除元素
+        //方法1：直接截断数组
+        var b = [100, 200, 300, 400, 500, 600];
+        b.length = 5;
+
+        //方法2：pop()
+        var item = b.pop();
+
+        //方法3：shift()
+        item = b.shift(); //后面的元素索引依次向前移动
+
+        //方法4：delete运算符
+        delete b[0]; //并不会减少数组的长度，后面元素的索引不变
+
+        console.log(b.length);
+        console.log(item);
+        console.dir(b);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

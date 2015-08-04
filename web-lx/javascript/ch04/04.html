@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*语法1：可以有若干个case，但是只能有一个可选的default语句*/
+        var type = 'html';
+        var c1 = 'html';
+        var c2 = 'css';
+        var c3 = 'javascript';
+        switch(type){
+            case c1:
+                console.log('html课程开始啦！');
+                break;//跳出选择判断
+
+            case c2:
+                console.log('css课程开始啦！');
+                break;
+
+            case c3:
+                console.log('javascript课程开始啦！');
+                break;
+
+            default:
+                console.log('还没有开通这门课程！');
+                break;
+        }
+
+
+        /*练习：语法2：贯穿语法，有时可以不写break语句*/
+        var year = 2000;
+        var month = 2;
+        switch (month){
+
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                console.log('这个月有31天');
+                break;
+
+            case 2:
+                if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+                    console.log('这个月有29天');
+                }else{
+                    console.log('这个月有28天');
+                }
+                break;
+
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                console.log('这个月有30天');
+                break;
+
+            default:
+                console.log('请输入1-12');
+                break;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

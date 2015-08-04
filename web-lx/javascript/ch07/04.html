@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        var result = factorialTwo(5);
+        document.write(result); //120
+
+        function factorialOne(x){
+
+            var result = 1;
+            for(var i = 1;i <= x ;i++){
+                result = i * result;
+            }
+            return result;
+        }
+
+        function factorialTwo(x){
+            if( x <= 1){
+                return 1;
+            }
+            return x * factorialTwo(x - 1);
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

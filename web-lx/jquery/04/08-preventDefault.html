@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<a href="images/img01.jpg">风景</a>
+
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+
+        $('a').click(function (event) {
+
+            $('<img>').attr('src',this.href).insertAfter($(this));
+
+            event.preventDefault();
+        });
+
+        /*document.getElementsByTagName('a')[0].onclick = function () {
+            var img = document.createElement('img');
+            img.src = this.href;
+            this.parentNode.insertBefore(img,this.nextSibling);
+            return false;
+        };*/
+    });
+
+</script>
+</body>
+</html>

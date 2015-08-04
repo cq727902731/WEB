@@ -1,0 +1,12 @@
+[{
+  "name": "崔强","age":10,
+  "married": false
+},
+  {
+    "name": "崔1强","age":20,
+    "married": true
+  },
+  {
+    "name": "崔2强","age":30,
+    "married": false
+  }]

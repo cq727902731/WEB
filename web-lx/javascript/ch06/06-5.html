@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //some:返回布尔值：查找数组中的数据有没有满足条件的
+        //在遍历的过程中，如果返回true，那么最终结果为true
+        //如果返回false，继续进入下一轮遍历直到最后，最终结果返回false
+        var data = [1, 2, 3, 4, 5, 6];
+        var result = data.some(function(value){
+
+            console.log('遍历' + value);
+            return value > 4;
+        });
+
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .line{
+            margin: 10px;
+        }
+
+        .des{
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background-color: lightcyan;
+            text-align: right;
+            line-height: 30px;
+        }
+
+        .input{
+            border:solid green 2px;
+            height: 24px;
+            border-radius: 5px;
+        }
+
+        .error{
+            color: red;
+            font-size: 12px;
+        }
+
+        .error_input{
+            border: solid 2px red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form action="" novalidate method="post" name="f1" id="f1" onsubmit="return checkForm2();" onreset="return confirmReset();">
+        <div class="line">
+            <label for="username" class="des">用户名：</label>
+            <input class="input" placeholder="用户名/email/手机" id="username" name="username" type="text" form="f1" onkeyup="checkEmpty('username','请输入用户名')"><!--form属性用于当表单元素不在表单中时，与表单做关联-->
+            <span id="username_error" class="error"></span>
+        </div>
+        <div class="line">
+            <label for="password" class="des">密码:</label>
+            <input class="input" placeholder="请输入6-10位数字" id="password" name="password" type="password" minlength="6" maxlength="10" onkeyup="checkEmpty('password','请输入密码')">
+            <span id="password_error" class="error"></span>
+        </div>
+        <div><button>提交</button></div>
+        <div class="line">
+            <button type="submit">button提交</button>
+            <button type="button" onclick="buttonSubmit()">button普通按钮(提交)</button>
+            <button type="reset">button重置按钮</button>
+        </div>
+        <div>
+            <input type="submit" value="input提交">
+            <input type="submit" value="input普通按钮(重置)" onclick="inputReset()">
+            <input type="submit" value="input重置按钮">
+        </div>
+        <div>
+            <input type="image" src="button.png"><!--有提交功能-->
+        </div>
+    </form>
+    <script>
+
+        /*获取表单对象的方式*/
+        var form = document.forms[0];
+        form = document.forms['f1'];
+        form = document.forms.f1;
+        form = document.f1;
+
+        /*获取表单控件对象的方式*/
+        var username = form.elements[0];
+        username = form.elements['username'];
+        username = form.elements.username;
+        username = form.username;
+        username = form['username'];
+        console.log(username);
+
+        username = document.f1.username;
+        password = document.f1.password;
+
+        console.log(username.type);
+        console.log(password.type);
+        console.log(username.name);
+        console.log(password.name);
+        console.log(username.value);
+        console.log(password.value);
+        console.log(username.form);
+        console.log(password.form);
+
+        function checkForm1(){
+
+            var username = document.f1.username;
+            var password = document.f1.password;
+            if(username.value === '' && password.value === ''){
+                alert('请输入用户名和密码');
+                return false;
+            }else if(username.value === ''){
+                alert('请输入用户名');
+                return false;
+            }else if(password.value === ''){
+                alert('请输入密码');
+                return false;
+            }
+        }
+
+        function checkForm2(){
+
+            var usernameOK = checkEmpty('username','请输入用户名');
+            var passwordOK = checkEmpty('password','请输入密码');
+
+            return usernameOK && passwordOK;
+        }
+
+        function checkEmpty(name,msg){
+
+            if(msg === 'undefined'){
+                msg = '此字段不能为空';
+            }
+            var element = document.f1[name];
+            var errorSpan = document.getElementById(name + '_error');
+            if(element.value === ''){
+                /*alert(msg);*/
+                errorSpan.innerText = msg;
+                elementOK = false;
+                addClass(element,'error_input');
+            }else{
+                var elementOK = true;
+                errorSpan.innerText = '';
+                removeClass(element,'error_input');
+            }
+            return elementOK;
+        }
+
+        function addClass(element,className){
+
+            var arr = element.className.split(' ');
+            for(var i = 0;i < arr.length;i++){
+
+                if(arr[i] == className){
+                   return;
+                }
+            }
+            element.className += ' ' + className;
+        }
+
+
+        function removeClass(element,className){
+
+            var arr = element.className.split(' ');
+            for(var i = 0;i < arr.length;i++){
+
+                if(arr[i] == className){
+                    arr.splice(i,1);
+                    break;
+                }
+            }
+            element.className = arr.join(' ');
+        }
+
+        function confirmReset(){
+            return confirm('你确定要重置表单么');
+        }
+
+        function buttonSubmit(){
+            var usernameOK = checkEmpty('username','请输入用户名');
+            var passwordOK = checkEmpty('password','请输入密码');
+
+            if(usernameOK && passwordOK){
+
+                if(document.f1.username.value === 'admin'){
+                    document.f1.action = 'admin/login';
+                }else{
+                    document.f1.action = 'user/login';
+                }
+                document.f1.submit();
+            }
+        }
+
+        function inputReset(){
+
+            document.f1.reset();
+        }
+
+    </script>
+
+</body>
+</html>

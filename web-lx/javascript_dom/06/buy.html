@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        button{
+            width: 400px;
+            height: 50px;
+            background-color: orangered;
+            color: #fff;
+            font: bold 20px/30px SimHei,sans-serifo;
+            /*border: 0;*/
+        }
+
+        button[disabled]{
+            background-color: grey;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn" disabled>抢购</button>
+
+<!--<script>
+
+    window.onload = function(){
+
+        var btn = document.getElementById('btn');
+        step();
+
+        function step(){
+            btn.innerText = '抢购' + '30s';
+            console.log(new Date());
+
+            setTimeout(step,1000);
+        }
+    };
+</script>-->
+<SCRIPT LANGUAGE="JavaScript">
+    function showTime(){
+
+        var endtime=new Date("2015/07/12,16:01:00");
+        var nowtime = new Date();
+        var leftsecond = parseInt((endtime.getTime()-nowtime.getTime())/1000);
+        var d = parseInt(leftsecond/3600/24);
+        var h = parseInt((leftsecond/3600)%24);
+        var m = parseInt((leftsecond/60)%60);
+        var s = parseInt(leftsecond%60);
+        document.getElementById("btn").innerHTML = '还剩' + d +"天" + h + "小时" + m + "分" + s + "秒";
+        if(leftsecond <= 0){
+            document.getElementById("btn").innerHTML = "开始抢购";
+            document.getElementById('btn').disabled = false;
+            clearInterval(st);
+        }
+    }
+
+    showTime();
+    var st = setInterval(showTime,1000);
+</SCRIPT>
+</body>
+</html>

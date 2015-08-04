@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        //every:返回布尔值: 查找数组中的数据是不是全都满足某一条件
+        //在遍历的过程中，如果返回true，那么继续进行下一次遍历，直到最后，最终结果为true
+        //如果返回false，立即停止遍历，最终结果返回false
+        var data = [1, 2, 3, 4, 5, 6];
+        var result = data.every(function(value){
+
+            console.log('遍历' + value);
+            return value < 4;
+        });
+
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

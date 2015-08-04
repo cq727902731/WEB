@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form action="">
+
+    <input type="checkbox" value="football" id="hobby_1" name="hobby"><label for="hobby_1">足球</label><br>
+    <input type="checkbox" value="basketball" id="hobby_2" name="hobby"><label for="hobby_2">篮球</label><br>
+    <input type="checkbox" value="ping-pong" id="hobby_3" name="hobby"><label for="hobby_3">乒乓球</label><br>
+    <button type="button" onclick="getValues()">取值</button>
+    <div id="result">您选择了：</div>
+    <script>
+
+        function getValues(){
+
+            var result = document.getElementById('result');
+            var hobbyList = document.getElementsByName('hobby');
+            var selectedArr = [];
+            for(var i = 0; i < hobbyList.length; i++){
+                var hobby = hobbyList[i];
+                console.log(hobby.checked);
+                console.log(hobby.getAttribute('checked'));
+                if(hobby.checked){
+                    console.dir(hobby.value);
+                    selectedArr.push(hobby.value);
+                }
+            }
+            result.innerHTML += selectedArr.join(',');
+        }
+    </script>
+</form>
+
+</body>
+</html>

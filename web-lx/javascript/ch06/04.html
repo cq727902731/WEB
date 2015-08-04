@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //slice()方法 :
+        var a = [1, 2, 3, 4, 5];
+        //var b = a.slice(1,3); //2,3 从索引为1的元素开始一直截取到索引为3的元素，并且包括索引1的元素，不包括索引3的元素
+        //var b = a.slice(1); //2,3,4,5
+        var b = a.slice(-2);
+
+        console.dir(a); //数组a没有被改变
+        console.dir(b); //截取出来的部分需要存入新的变量中
+
+
+        //join()方法:
+        var str = [1,2,3].join('-');
+        console.log(str);
+
+        //concat()方法：
+        var s = [1, 2, 3];
+        var t = [4, 5];
+        var v = s.concat(t, 7, 8);
+        console.log(s);
+        console.log(v);
+
+        //sort()方法：
+        var arr = new Array(6);
+        arr[0] = "George";
+        arr[1] = "John";
+        arr[2] = "Thomas";
+        arr[3] = "James";
+        arr[4] = "Adrew";
+        arr[5] = "Martin";
+        var newArr = arr.sort();
+        console.log(arr);
+        console.log(newArr);
+
+
+        //为sort传递函数类型的参数
+        console.log('--------------------------');
+        //要求：奇数排在前面，偶数排在后面，倒序
+        var m = [10, 2, 4, 5, 7];//[7、5、10、4、2];
+        function sortNumber(a,b) {
+
+            //如果两个数都是偶数
+            if(a % 2 == 0 && b % 2 == 0){
+                return b - a;
+            }
+
+            //如果两个数都是奇数
+            if(a % 2 == 1 && b % 2 == 1){
+                return b - a;
+            }
+
+            //a是奇数，b数偶数
+            if(a % 2 == 1 && b % 2 == 0){
+                return -1;
+            }
+
+            //a是偶数，b数奇数
+            if(a % 2 == 0 && b % 2 == 1){
+                return 1;
+            }
+
+            console.log(m);
+            console.log('执行排序函数：a = ' + a + ', b = ' + b);
+            return b - a;
+        }
+        var newM = m.sort(sortNumber);
+        console.log(newM);
+
+        //reverse()方法：反序排列
+        var arrRe = [4,2,1,5,9,6].reverse();
+        console.log(arrRe);
+
+        //toString()方法：打印对象的当前的toString()方法
+        //toLocaleString()方法：打印对象原始的toString()方法
+        var m = [1, 2, 3];
+        console.log(m.toString());
+        console.log(m.toLocaleString());
+
+        m.toString = function(){
+          return 'hello';
+        };
+        console.log(m.toString());
+        console.log(m.toLocaleString());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

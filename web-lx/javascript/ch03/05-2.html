@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>布尔值参与的运算</title>
+    <script>
+
+        //在数字环境中 true表示1 false表示0
+        //NaN和undefined参与运算时最终结果都是NaN
+        //null在数字环境中表示0
+        var a = 1 + true;//替换成NaN、undefined、null测试
+        console.log(a);
+
+        var b = 1 + false;
+        console.log(b);
+
+
+        //在字符串环境中 true表示字符串'true' false表示字符串'false'
+        //在字符串环境中NaN、undefined、null表示'NaN'、'undefined'、'null'
+        var c = '1' + true;//替换成NaN、undefined、null测试
+        console.log(c);
+
+        var d = '1' + false;
+        console.log(d);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

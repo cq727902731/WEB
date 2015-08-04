@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*基本类型值的传递：传递的是值本身*/
+        var a = 1;
+        var b = a;
+        b = 2;
+        console.log(a);
+
+
+        /*对象类型值的传递: 传递的是对象的引用-对象在内存中真实的存储地址*/
+        var person1 = {'姓名': '常宇', '年龄': 20, '婚否': false};
+        var person2 = person1;
+        person2['姓名'] = '李伟';
+        console.log(person1);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

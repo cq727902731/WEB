@@ -1,0 +1,623 @@
+/*ҳ�沼��*/
+body{
+    border-top: 4px solid #033691;
+    min-width: 1400px;
+}
+
+.wrap{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+header.top{
+    height: 507px;
+    position: relative;
+}
+
+footer.top{
+    height: 246px;
+    min-width: 1400px;
+    margin-top: 30px;
+    box-shadow: 0 -3px 5px rgba(0,0,0,0.3);
+}
+
+
+/*ͷ�õ�*/
+.bg-header {
+    position: absolute;
+    z-index: -1;
+}
+
+.bg-header img{
+    width: 1400px;
+    height: 500px;
+}
+
+/*logo*/
+.logo{
+    width: 252px;
+    height: 134px;
+    float: left;
+    margin-left: 200px;
+}
+
+.logo h1{
+    width: 252px;
+    height: 134px;
+    background: url(../images/sprite.png);
+    font-size: 0;
+}
+
+/*����*/
+.nav{
+    width: 789px;
+    height: 40px;
+    float: left;
+    margin-top: 45px;
+    background-color: #033691;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+.nav ul{
+    height: 40px;
+}
+.nav li{
+    float: left;
+
+}
+
+.nav li a{
+    display: inline-block;
+    color: #ffffff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+}
+
+.nav li i{
+    border-left: 1px solid #052358;
+}
+.nav li i{
+    border-right: 1px solid #4e66da;
+}
+
+/*��������*/
+main .module-1{
+    height: 769px;
+    /*position: relative;*/
+}
+
+/*��Ʒ*/
+.product{
+    width: 1310px;
+    height: 729px;
+    padding: 20px 0;
+    background-color: #e7f0ff;
+    float: left;
+    position: relative;
+}
+
+.product header{
+    position: absolute;
+    left: 50px;
+    top: -128px;
+    width: 277px;
+    height: 128px;
+    background: url("../images/chanpin.png") no-repeat;
+}
+
+.product header h2{
+    text-align: center;
+    margin-top: 75px;
+    font: normal bold 36px SimHei;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+.product>div{
+    float: left;
+}
+
+.product .g1{
+    float: left;
+    width: 616px;
+    height: 729px;
+}
+
+.product .maskwraper:hover .mask{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font: bold 48px SimHei,sans-serif;
+    /*background-color: rgba(0,0,0,0.30);*/
+    background-color: #000;
+    opacity: 0.30;
+    color: #fff;
+    line-height: 389px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product .maskwraper .mask{
+    display: none;
+}
+
+.product .g2{
+    margin-left: 20px;
+    float: left;
+    width: 330px;
+    height: 729px;
+}
+
+.product .g3{
+    margin-left: 20px;
+    float: left;
+    width: 324px;
+    height: 729px;
+}
+
+.product .p1{
+    position: relative;
+    width: 616px;
+    height: 389px;
+}
+
+.product .p1:hover .mask{
+    width: 616px;
+    height: 389px;
+    line-height: 389px;
+    font-size: 96px;
+}
+
+.product .p2{
+    position: relative;
+    margin-top: 20px;
+    float: left;
+    width: 257px;
+    height: 320px;
+}
+
+.product .p2:hover .mask{
+    width: 257px;
+    height: 320px;
+    line-height: 320px;
+}
+
+.product .p3{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    width: 339px;
+    height: 320px;
+}
+
+.product .p3:hover .mask{
+    width: 339px;
+    height: 320px;
+    line-height: 320px;
+}
+
+.product .p4{
+    position: relative;
+    width: 330px;
+    height: 272px;
+}
+
+.product .p4:hover .mask{
+    width: 330px;
+    height: 272px;
+    line-height: 272px;
+}
+
+.product .p5{
+    position: relative;
+    margin-top: 20px;
+    width: 330px;
+    height: 437px;
+}
+
+.product .p5:hover .mask{
+    width: 330px;
+    height: 437px;
+    line-height: 437px;
+}
+
+.product .p6{
+    position: relative;
+    width: 324px;
+    height: 272px;
+}
+
+.product .p6:hover .mask{
+    width: 324px;
+    height: 272px;
+    line-height: 272px;
+}
+
+.product .p7{
+    position: relative;
+    margin-top: 20px;
+    width: 324px;
+    height: 208px;
+}
+
+.product .p7:hover .mask{
+    width: 324px;
+    height: 208px;
+    line-height: 208px;
+}
+
+.product .p8{
+    position: relative;
+    margin-top: 20px;
+    width: 324px;
+    height: 209px;
+}
+
+.product .p8:hover .mask{
+    width: 324px;
+    height: 209px;
+    line-height: 209px;
+}
+
+/*����*/
+.sale{
+    width: 70px;
+    float: left;
+    margin-left: 20px;
+    margin-top: -60px;
+    /*position: relative;
+    top: -60px;*/
+}
+
+.sale>div{
+    width: 68px;
+    height: 68px;
+    background: url(../images/sprite.png) no-repeat 0 0;
+}
+
+.sale a{
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+}
+
+.sale .s1{
+    background-position: 0 -150px;
+}
+
+.sale .s2{
+    background-position: 0 -236px;
+    margin-top: 20px;
+}
+
+.sale .s3{
+    background-position: 0 -322px;
+    margin-top: 20px;
+}
+
+.sale .s4{
+    background-position: 0 -407px;
+    margin-top: 20px;
+}
+
+.sale .s5{
+    background-position: 0 -494px;
+    margin-top: 20px;
+}
+
+.sale .s6{
+    background-position: 0 -579px;
+    margin-top: 20px;
+}
+
+main .module-2{
+    height: 298px;
+    margin-top: 20px;
+}
+
+.quality{
+    float: left;
+    width: 966px;
+    height: 298px;
+    position: relative;
+    background: #e7f0ff url(../images/naiyuanpinzhi.png) no-repeat 0 0;
+}
+
+.quality header{
+    position: absolute;
+    top: 59px;
+    left: 78px;
+}
+
+.quality header h2{
+    text-align: center;
+    font: normal bold 36px SimHei;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+.quality .craft{
+    position: absolute;
+    left: 39px;
+    bottom: 9px;
+    width: 887px;
+    height: 203px;
+}
+
+/*����*/
+.news{
+    float: left;
+    width: 414px;
+    height: 298px;
+    margin-left: 20px;
+}
+
+.news header{
+    float: left;
+    width: 82px;
+    height: 298px;
+}
+
+.news header h2{
+    text-align: center;
+    font: normal bold 36px SimHei;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    background-color: #023591;
+    border: 4px solid #ffffff;
+    border-left: 0;
+    margin-top: 51px;
+}
+
+
+.news .content{
+    float: left;
+    width: 292px;
+    height: 266px;
+    border: 1px solid #d6d6d6;
+    padding: 15px;
+}
+
+.news .content li{
+    height: 48px;
+    border-bottom: 1px dotted #acacac;
+}
+
+.news .content time{
+    height: 48px;
+    line-height: 48px;
+    display: inline-block;
+    width: 80px;
+    vertical-align: bottom;
+}
+
+.news .content ul{
+    margin-bottom: 10px;
+}
+
+.news .content ul a{
+    height: 48px;
+    line-height: 48px;
+    display: inline-block;
+    white-space:nowrap;
+    width: 187px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    color: #000000;
+}
+
+.news .more{
+    float: right;
+}
+
+/*footer*/
+footer.top .foot-body{
+    margin: 0 auto;
+    width: 1400px;
+    line-height: 24px;
+    font-family: 宋体, sans-serif;
+    padding-top: 52px;
+}
+
+footer.top .title{
+    font-weight: bold;
+}
+
+footer.top .foot-body .websites{
+    margin-left: 80px;
+    float: left;
+}
+
+footer.top .foot-body .about{
+    margin-left: 170px;
+    float: left;
+}
+
+footer.top .foot-body .tel{
+    margin-left: 170px;
+    float: left;
+}
+
+footer.top .foot-body .sec4{
+    margin-left: 105px;
+    float: left;
+}
+
+/*全屏遮罩层*/
+#mask{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+/*登陆*/
+#login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 390px;
+    height: 446px;
+    background-color: #ffffff;
+}
+
+#login header{
+    position: relative;
+    height: 46px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: move;
+}
+
+#login header h3{
+    width: auto;
+    height: 18px;
+    font-size: 16px;
+    font-family: 宋体, sans-serif;
+    font-weight: bold;
+    color: #666;
+    padding: 15px 0 13px;
+    text-indent: 30px;
+}
+#login header i{
+    color: #CCCCCD;
+    float: right;
+    position: absolute;
+    right: 20px;
+    bottom: 13px;
+    cursor: pointer;
+}
+
+#login header i:hover{
+    color: #555758;
+}
+
+.content{
+    width: auto;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.content .c-form{
+    padding-bottom: 50px;
+    position: relative;
+}
+.content .c-form .c-block{
+    display: block;
+    min-height: 14px;
+    height: 14px;
+    padding: 8px 0 2px 0;
+    line-height: 14px;
+    font-size: 12px;
+    color: #fc4343;
+}
+
+.content .c-form .quick-login{
+    text-align: right;
+    margin: 0 0 10px 0;
+}
+
+.content .c-form .quick-login .a-quick-login{
+    background: url("../images/shouji.png") 0 4px no-repeat;
+    padding-left: 15px;
+    color: #666;
+    cursor: pointer;
+}
+
+.content .c-form .userName,.password,.login-type{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.content .c-form .userName .pass-userName,.pass-password{
+    width: 326px;
+    padding-right: 50px;
+}
+#userName,#password{
+    display: block;
+    position: relative;
+    height: 16px;
+    padding: 12px 10px 12px 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.content .c-form .next-login{
+    height: 15px;
+}
+
+.content .c-form .next-login .next-login-class{
+    vertical-align: middle;
+}
+.content .c-form .next-login .next-login-label{
+    display: inline;
+    color: #666;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+#login-button{
+    display: block;
+    height: 48px;
+    width: 350px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background: #3f89ec;
+    border: none;
+    position: relative;
+    top: 15px;
+}
+
+.content .c-form .login-type .a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #1b66c7;
+}
+
+.content .c-form .login-type .pass-fgpw{
+    position: absolute;
+    top: -16px;
+    right: 0;
+}
+
+.content .c-form .login-type .pass-reg{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    cursor: pointer;
+}
+
+#login-bar{
+    position: absolute;
+    float: right;
+    top: 10px;
+    right: 40px;
+}
+
+.content .other-login{
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    padding-left: 20px;
+    z-index: 16;
+    padding-bottom: 15px;
+}
+
+.content .other-login .ol-title{
+    color: #666;
+    font-size: 12px;
+}

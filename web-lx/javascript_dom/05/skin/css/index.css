@@ -1,0 +1,56 @@
+html,body{
+    height: 100%;
+    font: bold 40px/100px 'Microsoft YaHei',sans-serif;
+    text-align: center;
+}
+
+#changeSkin{
+    float: right;
+    top: 20px;
+    right: 20px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#changeSkin li{
+    float: left;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#changeSkin li a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#france{
+    background-color: red;
+
+}
+
+#germany{
+    background-color: #000000;
+}
+
+#russia{
+    background-color: #ffffff;
+}
+
+/***************************/
+.header{
+    height: 100px;
+}
+
+.main{
+    height: 50%;
+}
+
+.footer{
+    height: 100px;
+}
+
+

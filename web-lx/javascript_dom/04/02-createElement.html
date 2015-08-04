@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="testdiv"></div>
+<button onclick="fillDiv()">添加内容</button>
+<button onclick="addTitle()">添加标题</button>
+<button onclick="addFooter()">添加版权</button>
+
+<script>
+
+    function fillDiv(){
+        var p = document.createElement('p');
+        var div = document.getElementById('testdiv');
+        div.appendChild(p);
+        var t1 = document.createTextNode('this is ');
+        var em = document.createElement('em');
+        var t2 = document.createTextNode(' content.');
+        p.appendChild(t1);
+        p.appendChild(em);
+        p.appendChild(t2);
+
+        var t3 = document.createTextNode('my');
+        em.appendChild(t3);
+    }
+
+    function addTitle(){
+
+        /*var body = document.getElementsByTagName('body');*/
+        /*var body = document.getElementById('testdiv').parentNode;*/
+        var parent = document.body;
+        var target = document.getElementById('testdiv');
+        var newElement = document.createElement('h1');
+        var textH1 = document.createTextNode('网页标题');
+        newElement.appendChild(textH1);
+
+        parent.insertBefore(newElement,target);
+    }
+
+    function addFooter(){
+
+        var newElement = document.createElement('div');
+        var t1 = document.createTextNode('版权声明');
+        newElement.appendChild(t1);
+        var targetElement = document.getElementById('testdiv');
+        insertAfter(newElement,targetElement);
+    }
+
+    function insertAfter(newElement,targetElement){
+        //获取目标元素的父元素
+        var parent = targetElement.parentNode;
+        //判断目标元素是不是她的父元素的最后一元素
+        if(targetElement == parent.lastChild){
+        //如果是：就将新元素用appendChild的方式，追加到父元素的最后一个子元素的位置
+            parent.appendChild(newElement);
+        }//如果不是：找到目标元素的最后一个元素，然后把新元素插入到最后一个元素的前面
+        else{
+            parent.insertBefore(newElement,targetElement.nextSibling);
+        }
+    }
+
+</script>
+</body>
+</html>

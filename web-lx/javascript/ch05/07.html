@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+         var o = {x: null};
+         console.dir(o);
+
+        //检测属性是否存在
+        console.log('x' in o); //true
+        console.log('y' in o); //false
+        console.log('toString' in o); //true: o继承了原型中的toString属性（方法）
+
+        //检测属性是否是对象的自有属性
+        console.log(o.hasOwnProperty('x')); //true
+        console.log(o.hasOwnProperty('y')); //false
+        console.log(o.hasOwnProperty('toString')); //false
+
+        //使用 !== undefined（ !== 区分 undefined和null）
+        console.log(o.x !== undefined); //true
+        console.log(o.y !== undefined); //false
+        console.log(o.toString !== undefined); //true
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

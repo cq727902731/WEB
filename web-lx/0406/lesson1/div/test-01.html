@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 200px;
+        }
+        .blue{
+            background-color: blue;
+        }
+
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        function f1(id,idOther){
+            console.log('调用了：' + id);
+            var d = document.getElementById(id);//获取文档中的ID元素
+            d.className = 'blue';
+
+            var dOther = document.getElementById(idOther);//获取文档中的ID元素
+            dOther.className = 'yellow';
+        }
+    </script>
+</head>
+<body>
+    <div id="nav1" class="blue" onclick="f1('nav1','nav2')">普通筛选</div>
+    <div id="nav2" class="yellow" onclick="f1('nav2','nav1')">食材筛选</div>
+</body>
+</html>

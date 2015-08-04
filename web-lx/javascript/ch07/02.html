@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //没有return语句
+        var aa = a(); //返回值是undefined
+        console.log(aa);
+        function a(){
+            console.log('函数a,没有return语句');
+        }
+
+        //只有return语句
+        var bb = b();
+        console.log(bb); //返回值是undefined
+        function b(){
+            if(confirm('函数b,您是否要删除这条记录')){
+                console.log('函数b,有return语句:删除');
+                return;//立即停止函数的运行
+            }
+            console.log('函数b,没有删除');
+        }
+
+        //return表达式
+        console.log(c());
+        function c(){
+            return confirm('函数c,您是否要删除这条记录');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

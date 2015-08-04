@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var school = [{
+            title: '黑龙江大学',
+            items: [{
+                    title: '电子工程学院',
+                    items: [{
+                        title: '电子信息'
+                    },{
+                        title: '物联网'
+
+                    }]
+                },{
+                    title: '汽车学院',
+                    items: [{
+                        title: '汽车检测与维修'
+                    },{
+                        title: '汽车服务与营销'
+                    }]
+                }]
+        }]
+    </script>
+</head>
+<body>
+<div id="school">
+</div>
+    <!--<ul>
+        <li>
+            <div>黑龙江大学</div>
+            <ul>
+                <li>
+                    <div>电子工程学院</div>
+                    <ul>
+                        <li>
+                            <div>电子信息</div>
+                        </li>
+                        <li>
+                            <div>物联网</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>汽车学院</div>
+                    <ul>
+                        <li>
+                            <div>汽车检测与维修</div>
+                        </li>
+                        <li>
+                            <div>汽车服务与营销</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>-->
+
+    <script>
+        /*-------在div中添加ul标签------*/
+        //找到id为school的元素
+        var schoolDiv = document.getElementById('school');
+        showItem(schoolDiv,school);
+
+        function showItem(parentNode, dataArr){
+
+            //退出递归
+            if(dataArr === undefined){
+                return;
+            }
+
+            //创建一个ul元素
+            var ul = document.createElement('ul');
+            //把创建的新元素追加到school元素的末尾
+            parentNode.appendChild(ul);
+
+            for(var i = 0;i < dataArr.length;i++){
+                //创建组织项目
+                var li = document.createElement('li');
+                ul.appendChild(li);
+                //创建组织标题
+                var div = document.createElement('div');
+                div.innerText = dataArr[i].title;
+                li.appendChild(div);
+
+                showItem(li,dataArr[i].items);
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .parent>div{
+            float:left;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .footer{
+            background-color: yellow;
+        }
+
+        /*兼容所有版本的浏览器*/
+        .clearfix::before{
+            content: '';
+            display: table;
+        }
+        .clearfix::after{
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .clearfix{
+            *zoom: 1;   /*兼容IE6、7*/
+        }
+    </style>
+</head>
+<body>
+<div class="parent clearfix">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="footer">footer</div>
+
+</body>
+</html>

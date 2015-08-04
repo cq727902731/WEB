@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>w3c</title>
+</head>
+<body>
+
+    <p id="p1">p1</p>
+
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+
+        var p1 = document.getElementById('p1');
+        var clickHandler1 = function () {
+            console.log('p1 click 1');
+        };
+        p1.addEventListener('click', clickHandler1, true);
+
+        var clickHandler2 = function () {
+            console.log('p1 click 2');
+        };
+        p1.addEventListener('click', clickHandler2, true);
+
+        p1.removeEventListener('click', clickHandler1, true);
+
+        var body = document.body;
+        body.addEventListener('click', function () {
+            console.log('body click');
+        },true);
+    });
+</script>
+</body>
+</html>

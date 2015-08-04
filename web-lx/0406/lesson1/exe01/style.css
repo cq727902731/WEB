@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+}
+body{
+    font:  normal normal 14px/24px 微软雅黑,黑体,Verdana,Arial,snas-serif;
+}
+
+.header{
+    height: 150px;
+    width: 100%;
+    background-color: #731000;
+}
+
+.bg{
+    position: relative;
+    height: 640px;
+    background: #FEC18A url("images/main.jpg") no-repeat center center;
+}
+
+.bg .info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.bg .info .inner-info{
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto;
+    background: url("images/nw_logo.gif") no-repeat left 5px;
+}
+
+.bg .info .inner-info h3{
+    margin: 30px 0 30px 320px;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.bg .info .inner-info p{
+    margin-left: 320px;
+    color: #ffffff;
+}
+
+.footer{
+    height: 100px;
+    width: 100%;
+    background-color: #333;
+}

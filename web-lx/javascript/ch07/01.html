@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*函数名被变量名覆盖了*/
+        var a = 1;
+        function a(){
+            console.log('函数');
+        }
+
+        //a();
+
+        /*变量名被函数名覆盖了*/
+        var b = 'hello';
+        var b = function(){//重复声明 Duplicate declaration
+            console.log('函数b');
+
+        };
+
+        console.log(b);
+
+        function parseInt(){
+            console.log('我的parsrInt');
+        }
+        parseInt();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

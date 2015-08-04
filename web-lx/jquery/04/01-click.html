@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+
+        body{font-size:13px}
+        ul,li {margin:0;padding:0;list-style:none}
+        #menu li {text-align:center;float:left;padding:5px;
+            margin-right:2px;width:50px;cursor:pointer}
+        #menu li.tabFocus {font-weight:bold;
+            background-color:#f3f2e7;border:solid 1px #666;
+            border-bottom:0;z-index:100;position:relative}
+        #content {width:260px;height:80px;padding:10px;
+            background-color:#f3f2e7;clear:left;
+            border:solid 1px #666;position:relative;top:-1px}
+        #content li{display:none}
+        #content li.conFocus{display:block}
+
+    </style>
+</head>
+<body>
+
+
+<ul id="menu">
+    <li class="tabFocus">家居</li>
+    <li>电器</li>
+    <li>二手</li>
+</ul>
+<ul id="content">
+    <li class="conFocus">我是家居的内容</li>
+    <li>欢迎您来到电器城</li>
+    <li>二手市场，产品丰富多彩</li>
+</ul>
+
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    /*var arr = ['a','b','c'];
+    $.each(arr, function (index,item) {
+        console.log(index + ' ' + this);
+    });*/
+
+    $(function () {
+
+        /*$.each($('ul#menu li'), function (index) {
+
+            $(this).click(function () {
+
+                $('ul#menu li.tabFocus').removeClass('tabFocus');
+                $(this).addClass('tabFocus');
+
+                $('ul#content li.conFocus').removeClass('conFocus');
+
+                $('ul#content li:eq('+index+')').addClass('conFocus');
+            });
+        });*/
+
+        $('ul#menu li').click(function () {
+            $('ul#menu li.tabFocus').removeClass('tabFocus');
+            $(this).addClass('tabFocus');
+
+            $('ul#content li.conFocus').removeClass('conFocus');
+            var index = $(this).index('ul#menu li');
+            $('ul#content li:eq('+index+')').addClass('conFocus');
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form action="" name="f1">
+    <input type="text" name="username" id="username" value="admin">
+    <input type="password" name="password" id="password" value="123">
+</form>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+
+        $.ajax({
+            type: "GET",
+            url: "products.json",
+            dataType:"json",
+            data: {
+                'username': $('#username').val(),
+                'password': $('password').val()
+            },
+            cache:false,
+            async:false,
+            success: function (result) {
+
+                var products = result;
+                var div = $('products');
+                var ul = $('<ul>');
+                div.append(ul);
+
+                for(var i = 0; i < products.length; i++){
+                    var product = products[i];
+                    var li = $('<li>');
+                    ul.append(li);
+                    $.each(product, function (pro) {
+                        var span = $('<span>');
+                        span.attr('class',pro);
+                        span.html(product[pro]);
+                        li.append(span);
+                    });
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
+            },
+            statusCode:{
+                404: function () {
+                    alert('page not found');
+                },
+                500: function () {
+                    alert('后端程序')
+                }
+            }
+
+        });
+
+    });
+</script>
+</body>
+</html>

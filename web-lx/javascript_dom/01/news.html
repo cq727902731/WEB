@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+</head>
+<body>
+<script>
+    function News(title,content,top,num){
+        console.log('News');
+
+        this.title = title;
+        this.content = content;
+        this.top = top;
+        this.num = num;
+
+        this.add = function(){
+            console.log('add news');
+        };
+
+        this.del = function(){
+            console.log('delete news');
+        };
+
+        this.toString = function(){
+            return this.title + '' + this.content + '' + this.top + '' + this.num;
+        }
+    }
+
+    var n1 = new News('午间新闻','中午还没吃饭呢',true,20000);
+    var n2 = new News('晚间新闻','晚上也没吃饭呢',false,30000);
+    console.log(n1.toString());
+    console.log(n2.toString());
+    n1.add();
+    n1.del();
+    n2.add();
+    n2.del();
+</script>
+
+</body>
+</html>

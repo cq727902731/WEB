@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<input type="text" value="请输入用户名">
+<select name="" id="s">
+    <option value="1">1</option>
+    <option value="2" selected>2</option>
+    <option value="3">3</option>
+</select>
+<select name="" id="s2" multiple>
+    <option value="1">1</option>
+    <option value="2" selected>2</option>
+    <option value="3" selected>3</option>
+</select>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+
+        var $text = $(':text');
+        var v = $text.val();
+        console.log(v);
+
+        $text.val('admin');
+        $text.val('');
+
+        var $s = $('#s');
+        console.log($s.val());
+
+        var $s2 = $('#s2');
+        console.log($s2.val());
+    });
+</script>
+</body>
+</html>

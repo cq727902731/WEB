@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //同名函数，后定义的函数会覆盖先定义的函数
+        //如果实参的数量比形参多，那么多余的函数不会通过函数传递
+        //如果实参的数量比形参少，那么没有传递的参数值时undefined
+
+        f(100,2,4);
+        f(1);
+
+
+        /*function f(a){
+            console.log('a=' + a);
+        }*/
+
+        function f(a,b){
+            console.log('a=' + a +',b=' + b);
+
+            //arguments对象中存储所有传递进来的参数，可以通过索引访问
+            console.dir(arguments);
+        }
+
+        //定义一个函数：求所有参数的相加之和
+        //三要素：函数名\参数列表\返回值
+        function sum(){
+            var sum = 0;
+            for(var i = 0; i < arguments.length; i++){
+
+                if(isNaN(parseInt(arguments[i]))){
+                    continue;
+                }
+                sum += parseInt(arguments[i]);
+            }
+            return sum;
+        }
+
+        var result = sum(1,'hello',3,4,5,6);
+        console.log(result);
+
+
+
+        function doSum(){
+
+            var i1 = myform.i1.value;
+            var i2 = myform.i2.value;
+            document.getElementById('result').innerHTML = sum(i1,i2);
+
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+<form name="myform" action="" ></form>
+    <input type="number" name="i1"/>
+    <input type="number" name="i2"/>
+    <input type="button" onclick="doSum()"/>
+    <div>结果：<span id="result"></span></div>
+</body>
+</html>

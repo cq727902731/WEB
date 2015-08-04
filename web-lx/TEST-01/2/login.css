@@ -1,0 +1,29 @@
+/* 页面初始化 */
+body,form,h1,div,label,input,button{
+    padding: 0;
+    margin: 0;
+    border:0;
+}
+
+/*“登录网易通行证”为14px的微软雅黑字体，加粗，行高16px，
+距离第一个输入框15px；*/
+.form-title{
+    font: bold 14px/16px 微软雅黑;
+    margin-bottom: 15px;
+}
+
+/*两个输入框以及按钮之间间距为15px*/
+.form-item{
+    margin-bottom: 15px;
+}
+
+/*“用户名：”和“密码：”所在列列宽60px，文字为12px的宋体，
+文字与输入框垂直居中对齐；*/
+.form-item label{
+    display: inline-block;
+    width: 60px;
+    font: 12px 宋体;
+    vertical-align: middle;
+}
+
+/*输入框宽200px高20px（含边框），边框粗细为1px，颜色为#ddd*/

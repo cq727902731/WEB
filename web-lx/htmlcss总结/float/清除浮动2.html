@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .parent>div{
+            float:left;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .footer{
+            background-color: yellow;
+        }
+
+        .clear{
+            clear: both;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">  <!--没有高度的元素-->
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <br class="clear">      <!--清除浮动方式-->
+</div>
+
+<div class="footer">footer</div>
+
+</body>
+</html>

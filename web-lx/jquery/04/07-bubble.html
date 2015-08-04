@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <div>
+        <button>按钮</button>
+    </div>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+
+        $('body').click(function () {
+            console.log('body');
+        });
+
+        $('div').click(function () {
+            console.log('div');
+        });
+
+        $('button').click(function (event) {
+            event.stopPropagation();
+            console.log('button');
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

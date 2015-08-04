@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<img src="images/img07.jpg" alt="07">
+
+<script src="../jquery-1.6.4.js"></script>
+<script>
+    $(function () {
+        $('img').toggle(function () {
+            $(this).attr('src','images/img01.jpg');
+        }, function () {
+            $(this).attr('src','images/img02.jpg');
+        }, function () {
+            $(this).attr('src','images/img03.jpg');
+        });
+    });
+
+</script>
+</body>
+</html>

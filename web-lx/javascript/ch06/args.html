@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+
+        /*var s = '["hello", "hi", "byebye", "ok", "no"]';
+
+        console.dir(typeof s);
+        console.dir(typeof arr);*/
+
+        //forEach的函数参数有默认的三个参数：分别是数组元素，数组元素的索引，数组本身
+        var arr = ['hello', 'hi', 'byebye', 'ok', 'no'];
+        arr.forEach(function(value, index, thisArr){
+            console.group();
+            console.log(value);
+            console.log(index);
+            console.log(thisArr);
+            console.groupEnd();
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

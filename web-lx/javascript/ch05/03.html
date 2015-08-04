@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var circle =  {
+            center: {x: 0, y:0},
+            radius: 3
+        };
+        console.log(circle);
+
+        //可以随时为对象添加属性
+        circle.fillColor = 'red';
+        circle.borderColor = 'black';
+        console.log(circle);
+
+
+        //删除对象的属性
+        console.log(typeof circle);
+        delete circle.borderColor;//使用delete运算符删除属性
+        console.log(circle);
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

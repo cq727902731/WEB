@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .error{
+            color: firebrick;
+            font-size: 12px;
+        }
+
+        .error_input{
+            border: solid 2px red;
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+
+<form id="f1" name="f1" action="login" method="post">
+
+    <div>
+        <label>性别</label>
+        <input type="radio" name="sex" id="sex_1" value="1"><label for="sex_1">男</label>
+        <input type="radio" name="sex" id="sex_2" value="2"><label for="sex_2">女</label>
+        <span id="sex_error" class="error"></span>
+    </div>
+    <div>
+        <label>爱好</label>
+        <input type="checkbox" name="hobby" id="hobby_1" value="1"><label for="hobby_1">篮球</label>
+        <input type="checkbox" name="hobby" id="hobby_2" value="2"><label for="hobby_2">足球</label>
+        <input type="checkbox" name="hobby" id="hobby_3" value="3"><label for="hobby_3">排球</label>
+
+        <span id="hobby_error" class="error"></span>
+    </div>
+    <div class="line">
+        <button type="submit">提交</button>
+    </div>
+
+</form>
+
+<script src="lib.js"></script>
+<script>
+
+    window.onload = function(){
+
+        var form = document.f1;
+        form.onsubmit = function(){
+
+            var sexOK = checkRadioCheckBoxEmpty('f1','sex','请选择一个选项');
+            var hobbyOK = checkRadioCheckBoxEmpty('f1','hobby','请选择一个选项');
+
+            return sexOK && hobbyOK;
+        };
+
+        for(var i = 0;i < form.sex.length;i++){
+            form.sex[i].onchange = function(){
+                checkRadioCheckBoxEmpty('f1','sex','请选择一个选项')
+            }
+        }
+
+        for(i = 0;i < form.hobby.length;i++){
+            form.hobby[i].onchange = function(){
+                checkRadioCheckBoxEmpty('f1','hobby','请选择一个选项')
+            }
+        }
+    };
+</script>
+
+</body>
+</html>

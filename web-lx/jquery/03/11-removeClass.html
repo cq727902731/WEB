@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .li,.i2,.i3,.i4{
+            font-size: 30px;
+        }
+
+        .red{
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li class="i1 red">1</li>
+    <li class="i2 red">2</li>
+    <li class="i3 red">3</li>
+    <li class="i4 red">4</li>
+</ul>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+        $('ul li').removeClass(function (index, className) {
+            if(className == 'i3 red'){
+                return 'red';
+            }
+        });
+
+        /*$('ul li:nth-child(3)').removeClass('red');*/
+    });
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var a = ['world'];
+        var v = a[0];  //索引从0零开始，读取数组的第一个元素
+
+        a[1] = 3.14; //写数组的第二个元素
+
+        var i = 2; //索引可以是变量
+        a[i] = 'hello';
+
+        a[i + 1] = 3; //索引可以是表达式
+
+        a[a[i + 1]] = 4; //索引可以更复杂
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

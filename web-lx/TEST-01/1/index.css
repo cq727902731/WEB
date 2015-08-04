@@ -1,0 +1,40 @@
+/*页面初始化*/
+body,div,h3,p,img{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*左图右文，总宽度未知，图文之间间距15px*/
+/*图片宽高均为100px*/
+.news img{
+    float: left;
+    margin-right: 15px;
+    width: 100px;
+    height: 100px;
+    background-color: #0079BE;
+}
+
+/*字体为宋体，行高为25px，最多显示4行文字*/
+.news .article{
+    font-family: 宋体, sans-serif;
+    line-height: 25px;
+    height: 100px;
+    overflow: hidden;
+}
+
+/*标题要求单行显示并且超出时显示”…“，标题文字为粗体，大小为16px，黑色*/
+.news h3{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*段落文字大小为14px，颜色为#666*/
+.news p{
+    font-size: 14px;
+    color: #666;
+}

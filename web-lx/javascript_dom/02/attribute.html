@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<label id="label1" class="title" for="username">用户名</label>
+<input type="text" id="username" maxlength="10" disabled>
+<script>
+
+    var label = document.getElementById('label1');
+    console.log(label.id);
+    console.log(label.className);
+    console.log(label.htmlFor);
+
+    var a = 'user last';
+    var arr = a.split(' ');
+
+    console.log(arr);
+
+    var elements = [1,2,3];
+    var element;
+
+    for(var i = 0; element = elements[i]; i++){
+        console.log(element);
+    }
+
+    var input = document.getElementById('username');
+    console.group();
+    console.log(typeof input.id);
+    console.log(typeof input.maxLength);
+    console.log(typeof input.disabled);
+    input.disabled = false;
+    console.groupEnd();
+
+    console.group();
+    console.log(typeof input.getAttribute('id'));
+    console.log(typeof input.getAttribute('maxLength'));
+    console.log(typeof input.getAttribute('disabled'));
+
+    /*input.setAttribute('disabled','false');*///错误写法
+    input.removeAttribute('disabled');//正确写法
+    console.groupEnd();
+</script>
+</body>
+</html>

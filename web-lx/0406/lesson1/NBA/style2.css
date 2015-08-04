@@ -1,0 +1,101 @@
+body,h1,h2,p{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body{
+    background:url("images/zhenpi.jpg") repeat center;
+}
+h1{
+    text-align: center;
+    background:url("images/fanbu.jpg") repeat center;
+
+}
+h2{
+    text-align: center;
+    color: blueviolet;
+    background:url("images/fanbu.jpg") repeat center;
+    font: bold 36px 黑体,sans-serif;
+    margin: 20px;
+
+}
+p{
+    text-indent: 2em;
+    line-height: 24px;
+    font-family: 微软雅黑, sans-serif;
+}
+.big-box{
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #EFEFEF;
+}
+.header{
+    border: 1px greenyellow dashed;
+    padding: 1px;
+    margin:  0 1px;
+}
+.main{
+    border: 1px greenyellow solid;
+    padding: 1px;
+    margin: 0 1px;
+    background: darkcyan url("images/fanbu.jpg") repeat;
+}
+.Player1{
+    margin: 0 1px;
+    border: 0 yellow solid;
+}
+.Player2{
+    margin: 0 1px;
+    border: 0 yellow solid;
+}
+.footer{
+    border: 1px greenyellow solid;
+    padding: 1px;
+    margin: 0 1px;
+    text-align: center;
+    background-image: url("images/fanbu.jpg");
+}
+.nav{
+    text-align: center;
+    margin-top: 20px;
+    background-image: url("images/qian.jpg");
+}
+.nav li{
+    display: inline-block;
+}
+.nav li a{
+    padding: 15px;
+    display: inline-block;
+}
+.nav li a:hover{
+    background-color: blue;
+    color: #ffffff;
+}
+.login-bar{
+    position: fixed;
+    background:url("images/fanbu.jpg") repeat center;
+    width: 100%;
+}
+.login-bar .inner-bar{
+    width: 1000px;
+    background:url("images/fanbu.jpg") repeat center;
+    margin: 0 auto;
+}
+.login-bar a{
+    background: url("images/icoQQWB.gif") no-repeat 0 0;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    padding-left: 28px;
+    color: black;
+    text-decoration: none;
+}
+.login-bar .qq{
+    background-position: 0 0;
+}
+.login-bar .wb{
+    background-position: 0 -28px;
+}
+label{
+    line-height: 24px;
+}

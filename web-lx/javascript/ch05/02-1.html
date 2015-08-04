@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //方法1：对象直接量
+        var a = {}; //没有任何属性的对象
+
+        var point = {x: 1, y: 2}; //两个属性的对象，属性名可以使用引号，也可以不使用引号
+
+        var y = 'x';
+        console.log(point['y']); //访问的是 point的属性y：打印2
+        console.log(point[y]); //访问的是变量y中存储的属性x：打印1
+
+
+        var point2 = {x: point.x,  y: point.y + 1};  //更复杂的值
+
+        //定义一个复杂对象
+        var book = {
+
+            'main title': 'JavaScript',   //属性名字中有空格，必须使用引号
+            'sub-title': '权威指南',       //属性名字中有连字符，必须使用引号
+            'for': 'javascript初学者',     //"for"是关键字，必须使用引号
+            author: ['大卫', '张三'],      //属性的值是一个对象
+            publisher: {                  //属性的值是一个对象
+                name: '机械工业出版社',
+                address: '北京',
+                telephone: '88378991'
+            }
+        };
+
+
+        //定义一个圆
+        var circle =  {
+            center: {x: 0, y:0},
+            radius: 3
+        };
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

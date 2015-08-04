@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var a = [100, 200, 300, 400, 500];
+        var sum = a.reduce(function(a, value/*, index, thisArr*/){
+            /*console.group();
+            console.log(a);
+            console.log(value);
+            console.log(index);
+            console.log(thisArr);
+            console.groupEnd();*/
+            return a + value;
+        });
+
+        console.log(sum);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

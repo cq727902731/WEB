@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .red{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<p id="p1">jQuery 入门</p>
+<p id="p2">$()方法的使用</p>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+$(function () {
+
+    var p1 = document.getElementById('p1');//原生js
+    var $p1 = $(p1);//转换成jQuery
+    $p1.hide(3000);
+
+    var $p2 = $('#p2');
+    var p2 = $p2[0];
+    p2.className = 'red';
+});
+</script>
+</body>
+</html>

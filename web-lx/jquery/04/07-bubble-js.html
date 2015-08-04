@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div>
+    <button>按钮</button>
+</div>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    window.onload = function () {
+
+        document.getElementsByTagName('body')[0].onclick = function () {
+            console.log('body');
+        };
+
+        document.getElementsByTagName('div')[0].onclick = function () {
+            console.log('div');
+        };
+
+        document.getElementsByTagName('button')[0].onclick = function (event) {
+
+            if(!event){
+                event = window.event;
+            }
+
+            if(event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancelBubble = true;
+            }
+
+            console.log('button');
+        };
+
+    }
+
+
+</script>
+</body>
+</html>

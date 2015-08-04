@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    //1、普通数组
+    //定义数组
+
+    var beatles = new Array(4);
+    var beatles1 = new Array();
+    var beatles2 = [];
+
+    //赋值
+    beatles[0] = 'John';
+    beatles[1] = 'Paul';
+    beatles[2] = 'George';
+    beatles[3] = 'Ringo';
+
+    //数组的长度可以伸缩
+    beatles1[0] = 'John';//增加长度
+    beatles.length = 3;//减少数组的长度
+    console.log(beatles);
+    console.dir(beatles);
+
+    //表示多种数据结构
+    beatles.pop();//栈
+    beatles.push('Ringo');//栈
+    console.dir(beatles);
+
+    beatles.shift();//队列
+    console.dir(beatles);
+
+    //数组可以存储不同的数据类型
+    var john = ['John',1940,false];
+
+    //数组可以包含另一个数组
+    var beatles3 = [];
+    beatles3[0] = john;
+    console.log(beatles3[0][1]);
+
+    //2、关联数组
+    var john1 = [];
+    john1['name'] = 'John';
+    john1['birthday'] = 1940;
+    john1['living'] = false;
+
+    var beatles4 = [];
+    beatles4['singer'] = john1;
+    console.dir(beatles4['singer']);
+
+    //3、对象
+    //创建对象
+    var paul = new Object();
+    var paul1 = {};
+
+    paul.name = 'Paul';
+    paul.birthday = 1941;
+    paul.living = true;
+
+    //可以使用.运算符或[]访问对象中的属性
+    var paul2 = {'name':'Paul','birthday':'1941','living':'true'}
+    console.dir(paul2);
+    console.log(paul2.name);
+    console.log(paul2['birthday']);//使用中括号访问对象的属性要用引号
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .d-float{
+            border: 10px dotted orange;
+            height: 100px;
+            width: 100px;
+            float: left;
+        }
+
+        .d1, .d2{
+            border: 10px solid green;
+            height: 60px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>浮动布局</h1>
+    <div class="d-float">d-float</div>
+    <div class="d1">d1：绿色的d1标签和d2标签会忽略d-float标签的存在，在文档流中依次排列。</div>
+    <div class="d2">d2：d-float标签从正常的文档流中浮动起来，好像漂浮在其他元素的上面。虽然d1和d2所在的盒子会忽略浮动元素的存在，但是盒子中的内容会环绕浮动元素排列。</div>
+</body>
+</html>
+
+
+

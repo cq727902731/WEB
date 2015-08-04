@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+
+    clock();
+
+    function clock(){
+
+        var timer1 = setInterval(f1,2000);
+        var i = 0;
+        function f1(){
+            i++;
+            console.log(new Date());
+            if(i>=5){
+                clearInterval(timer1);
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

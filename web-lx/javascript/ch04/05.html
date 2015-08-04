@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*从1到10*/
+        var a = 1;//循环初始条件
+        while(a <= 10){//循环临界条件
+            console.log(a);
+            document.write(a + '<br>');
+            a++;//迭代
+        }
+
+        /*练习：从10到1*/
+        var b = 10;
+        while(b >= 1){
+            console.log(b);
+            b--;
+        }
+
+        console.log('----------------');
+
+        /*练习：从1到100的偶数*/
+        var c = 2;//初始值
+        while(c <= 100){//结束值
+            console.log(c);
+            c += 2;
+        }
+
+
+        console.log('----------------');
+
+        /*练习：从1到100的偶数*/
+        var d = 1;//初始值
+        while(d <= 100){//结束值
+            if(d % 2 == 0){//偶数
+                console.log(d);
+            }
+            d++;
+        }
+
+        console.log('循环结束');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

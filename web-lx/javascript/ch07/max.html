@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+
+
+        var result = max2(-100,-200,-300,-400);
+        console.log(result);
+
+        function max1(/*number*/){
+            console.dir(arguments);
+
+            var arr = [];
+            for(var i = 0; i < arguments.length; i++){
+                arr.push(arguments[i]);
+            }
+            arr.sort(function(a,b){
+                return b - a;
+            });
+            return arr[0];
+        }
+
+        function max2(){
+            var max = arguments[0];
+            for(var i = 1; i < arguments.length; i++){
+                if(arguments[i] > max){
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+        /*console.log(Math.min(-100,-200,-300,-400));*/
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

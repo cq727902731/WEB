@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<img src="images/img06.jpg" alt="">
+<img src="images/img07.jpg" alt="">
+<img src="images/img08.jpg" alt="">
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $(function () {
+        
+        $('img').attr('src', function (index, attr) {
+
+            console.log(index);
+            console.log(attr);
+            return 'images/img0' + (index + 1) + '.jpg'
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-Hans" lang="zh-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>box</title>
+    <style type="text/css">
+
+        /*
+        ie6的问题：
+        盒子中最左边的浮动元素的左边距*2
+        盒子中最右边的浮动元素的右边距*2*/
+
+        /*
+        解决办法1：在ie6中hack
+        解决办法2：使用父元素的padding,而不是元素的margin*/
+
+        {
+            clear:both;
+        }
+        pre
+        {
+            margin:0;
+            white-space:pre-wrap;
+            word-wrap:break-word;
+        }
+        #container
+        {
+            width:700px;
+            margin:0 auto;
+        }
+        #content_1
+        {
+            background:#FFCC00;
+            border:20px solid #D65C00;
+            float:right;
+            height:300px;
+            margin-right:5px;
+            width:200px;
+            padding:30px;
+        }
+        #content_2
+        {
+            background:#CEEDFC;
+            border:20px solid #336699;
+            float:left;
+            height:300px;
+            margin-left:10px;
+            padding:30px;
+            width:280px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <p>已声名DOCTYPE html，即渲染模式：标准模式。
+    </p>
+    <p>IE6浏览器中，第1个元素float:right产生双倍margin-right，第2个元素float:left产生双倍margin-left；。Firefox显示正常。
+    </p>
+    <pre>
+#container
+{
+    width:700px;
+    margin:0 auto;
+}
+    </pre>
+    <div id="content_1">
+        <pre>
+#content_1
+{
+    background:#FFCC00;
+    border:20px solid #D65C00;
+    float:right;
+    height:300px;
+    margin-right:5px;
+    width:200px;
+    padding:30px;
+}
+        </pre>
+    </div>
+    <div id="content_2">
+        <pre>
+#content_2
+{
+    background:#CEEDFC;
+    border:20px solid #336699;
+    float:left;
+    height:300px;
+    margin-left:10px;
+    padding:30px;
+    width:280px;
+}
+        </pre>
+    </div>
+    <div class="clear">
+    </div>
+    <img src="./michi.png" alt="米尺" />
+</div>
+</body>
+</html>

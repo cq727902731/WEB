@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        var result1 = f1();//undefined
+        console.log(result1);
+        //f2();
+        var result2 = f2();
+        console.log(result2);
+
+
+        //自定义函数：没有返回值的函数，返回的是undefined
+        function f1(){
+            var a = 11;
+            if(a <= 10) {
+                return;//立即终止函数的执行
+            }
+            console.log(a);
+        }
+
+
+        //自定义函数：有返回值的函数返回的是return后面表达式的值
+        function f2(){
+            var a = 9;
+            if(a < 10){
+                return '0' + a;//立即终止函数的执行并返回一个值
+            }else{
+                return a;
+            }
+        }
+
+
+        //预定义函数（内置）：
+        /*parseInt()
+         parseFloat()
+         Number()
+         String()
+         isNaN()
+         isFinite()
+         */
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        var a = {username: 'tom', age: 20};
+
+        var b = new Object();
+        b.username = 'tom';
+        b.age = 20;
+
+
+        console.log(a.username);
+        a.username = 'Tim';
+        console.log(a.username);
+
+        console.log(a);
+        console.dir(a);
+        console.log(a.toString());
+        alert(a);
+
+        console.dir(Object.prototype); //原型属性
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var a = 1;
+        var b = 3;
+        var c = add(a,b);
+        var d = sub(a,b);
+        console.log(c);
+        console.log(d);
+
+        //在函数中定义的参数是函数中的局部变量,和函数外的同名的全局变量没有关系，和其他函数中的同名的局部变量也没有关系
+        function add(a,b){
+            a++;
+            return a + b;
+        }
+
+        function sub(a,b){
+            a++;
+            return a - b;
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
