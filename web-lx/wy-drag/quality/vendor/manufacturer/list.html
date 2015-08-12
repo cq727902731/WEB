@@ -1,0 +1,104 @@
+
+
+
+<div id="toolbar">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" onclick="newItem({formUrl:'quality/vendor/manufacturer/form.html'})">增加供货单位</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" onclick="destroyItems('quality/vendor/manufacturer/deleteitems.html')">删除供货单位</a>
+</div>
+
+<div id="ly" class="easyui-layout" fit="true" border="false">
+    <div region="center" title="数据列表" iconCls="wy-icon-table" border="false" >
+        <!-- <div class="wy-centerbox"> -->
+        <!-- 列表开始 -->
+        <table id="dg" url="quality/vendor/manufacturer/listjson.json" >
+            <thead>
+            <tr>
+                <th data-options="field:'id',checkbox:true"></th>
+                <th field="edit" formatter="rowformater" halign="center" align="center" >操作</th>
+                <th field="name" halign="center">企业名称</th>
+                <th field="searchKey" halign="center">查询关键字</th>
+                <th field="fileNumber" halign="center">档案号</th>
+            </tr>
+            </thead>
+        </table>
+        <!-- 列表结束 -->
+        <!-- </div> -->
+    </div>
+    <!-- <div region="east" style="width:690px;" split="true" border="false" collapsed="true"></div> -->
+</div>
+
+<script type="text/javascript">
+
+    $('#dg').datagrid({
+        rownumbers: true,
+        pagination: true,
+        singleSelect:false,
+        striped: true,
+        toolbar: '#toolbar',
+        pageSize: 20
+    });
+
+    function rowformater(value,row,index){
+
+        var dataUrl = 'quality/vendor/manufacturer/itemjson.json';
+        var formUrl = 'quality/vendor/manufacturer/form.html';
+        var agreementFormUrl = 'quality/vendor/manufacturer/agreement_form.html';
+        var edit = '<span title="详细信息" class="editColumn" onclick="editItem(event, {dataUrl:\''+dataUrl+'\', formUrl:\''+formUrl+'\', callbackFun:showFormValue})" ></span>';
+        var sale = '<span title="销售人员" class="saleColumn" onclick="showSaleList(event,'+row.id+', \''+row.name+'\')" ></span>';
+        var variety = '<span title="药品档案" class="pillColumn" onclick="showDrugList(event,'+row.id+', \''+row.name+'\')" ></span>';
+        var agreement = '<span title="质量保证协议" class="scriptColumn" onclick="editItem(event,{dataUrl:\''+dataUrl+'\', formUrl:\''+agreementFormUrl+'\',callbackFun:showAgreementFormValue,title:\'质量保证协议\',icon:\'wy-icon-agreement\'})" ></span>';
+
+        return edit + sale + variety+ agreement;
+    }
+
+    function showFormValue(data){
+        //console.log("callbackFun");
+        var dataReBuild = {
+            'id': data.id,
+            'name': data.name,
+            'fileNumber': data.fileNumber
+        };
+
+        var tabList = ['infoLicenseForProduction',//药品生产许可证
+            'infoLicenseForBusiness',//企业法人营业执照
+            'infoGmp',//gmp证书
+            'infoAccount',//开户信息
+            'infoTax',//税务登记证
+            'infoOrganizationCode'//组织机构代码证
+        ];
+        for(var i = 0; i < tabList.length; i++){
+            dataReBuild = $.extend(dataReBuild, buildDataProp(tabList[i], data));
+        }
+
+        $('#fm').form('load',dataReBuild);
+    }
+
+    //质量保证协议表单
+    function showAgreementFormValue(data){
+
+        var dataReBuild = {
+            'id': data.id,
+            'name': data.name
+        };
+
+        var tabList = ['agreement'];
+        for(var i = 0; i < tabList.length; i++){
+            dataReBuild = $.extend(dataReBuild, buildDataProp(tabList[i], data));
+        }
+
+        $('#agreement_fm').form('load',dataReBuild);
+        $('#name').text(data.name);
+    }
+
+    function showSaleList(e,id,name){
+        stopPropagation(e);
+        open1('quality/sale/list_of_vendor.html',name);
+        /*open1('quality/sale/list_of_vendor?vendorId=' + id, name);*/
+    }
+
+    function showDrugList(e,id,name){
+        stopPropagation(e);
+        open1('quality/drug/manufacturer/list_of_vendor.html',name);
+    }
+
+</script>
